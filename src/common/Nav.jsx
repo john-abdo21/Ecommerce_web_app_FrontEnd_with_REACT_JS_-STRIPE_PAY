@@ -96,7 +96,7 @@ export class Nav extends Component {
 
 
                     <li className="nav-item">
-                      <Link className="nav-link mx-auto" to="#"><BadgeIcon /> &nbsp;Add Employee</Link>
+                      <Link className="nav-link mx-auto" to="#"><BadgeIcon /> &nbsp;Edit Employee</Link>
                     </li>
                     <li className="nav-item">
                     <Link className="nav-link mx-auto" to="#"><AddReactionIcon /> &nbsp;Verify Sellers</Link>
