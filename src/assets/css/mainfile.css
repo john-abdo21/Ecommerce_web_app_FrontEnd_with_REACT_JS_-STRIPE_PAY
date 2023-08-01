@@ -1,3 +1,82 @@
+@media (min-width:350px) and (max-width:374px){
+    .regformwidth{
+        width: 70vw !important;
+    }
+}
+
+@media (min-width:375px) and (max-width:389px){
+    .regformwidth{
+        width: 70vw !important;
+    }
+}
+
+@media (min-width:390px) and (max-width:411px){
+    .regformwidth{
+        width: 70vw !important;
+    }
+}
+
+@media (min-width:412px) and (max-width:539px){
+    .regformwidth{
+        width: 70vw !important;
+    }
+}
+
+@media (min-width:540px) and (max-width:767px){
+    .regformwidth{
+        width: 70vw !important;
+    }
+}
+
+@media (min-width:768px) and (max-width:819px){
+    .regformwidth{
+        width: 80vw !important;
+    }
+}
+
+@media (min-width:820px) and (max-width:911px){
+    .regformwidth{
+        width: 80vw !important;
+    }
+}
+
+@media (min-width:912px) and (max-width:1023px){
+    .regformwidth{
+        width: 80vw !important;
+    }
+}
+
+@media (min-width:1024px) and (max-width:1279px){
+    .regformwidth{
+        width: 45vw !important;
+    }
+}
+
+@media (min-width:1280px) and (max-width:1365px){
+    .regformwidth{
+        width: 45vw !important;
+    }
+}
+
+@media (min-width:1366px) and (max-width:1919px){
+    .regformwidth{
+        width: 45vw !important;
+    }
+}
+
+@media (min-width:1920px) and (max-width:2559px){
+    .regformwidth{
+        width: 45vw !important;
+    }
+}
+
+@media (min-width:3840px) and (max-width:8000px){
+    .regformwidth{
+        width: 45vw !important;
+    }
+}
+
+
 .disp{
     background-color: aqua !important;
     width: 100vw !important;
@@ -190,3 +269,4 @@
     color: cyan;
     text-shadow: 0 0 10px #00FFFF, 0 0 20px #00FFFF, 0 0 30px #00FFFF, 0 0 40px #00FFFF, 0 0 40px #00FFFF, 0 0 60px #00FFFF, 0 0 70px #00FFFF;
 }
+

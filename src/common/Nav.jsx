@@ -13,6 +13,7 @@ import MenuBookIcon from '@mui/icons-material/MenuBook';
 import BadgeIcon from '@mui/icons-material/Badge';
 import AddReactionIcon from '@mui/icons-material/AddReaction';
 import ReportIcon from '@mui/icons-material/Report';
+import VerifiedIcon from '@mui/icons-material/Verified';
 
 import {
     BrowserRouter as Router,
@@ -131,11 +132,15 @@ export class Nav extends Component {
                       <Link className="nav-link mx-auto" to="/loginUser"><Face6Icon /> &nbsp;Login</Link>
                     </li>
                     <li className="nav-item">
-                    <Link className="nav-link mx-auto" to="#"><HowToRegIcon /> &nbsp;Register</Link>
+                    <Link className="nav-link mx-auto" to="/regUser"><HowToRegIcon /> &nbsp;Register</Link>
                     </li> 
 
                     <li className="nav-item">
                     <Link className="nav-link mx-auto" to="#"><LogoutIcon /> &nbsp;Logout</Link>
+                    </li> 
+
+                    <li className="nav-item">
+                    <Link className="nav-link mx-auto" to="#"><VerifiedIcon /> &nbsp;Verify Email</Link>
                     </li> 
 
                     <li className="nav-item">
