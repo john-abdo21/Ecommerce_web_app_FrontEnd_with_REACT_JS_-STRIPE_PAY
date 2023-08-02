@@ -23,11 +23,16 @@ const RegSeller = React.lazy(()=>import('../component/RegSeller'));
 export class Header extends Component {
     constructor(){
         super();
+        this.state = {
+            image : '',
+            slno : '',
+            role : ''
+        }
     }
     
     BootstrapSpinnerLoader = ()=> {
         return (
-        <div className="d-flex justify-content-center align-items-center" style={{ height: '300px' }}>
+        <div className="d-flex justify-content-center align-items-center" style={{ height: '100vh', width: '100vw' }}>
             <div class="spinner-grow text-danger" role="status">
                 <span class="sr-only">Loading...</span>
             </div>
@@ -39,6 +44,34 @@ export class Header extends Component {
             </div>
         </div>
         );
+    }
+
+    componentDidMount(){
+
+        if(localStorage.getItem('slno')){
+            axios.get(`/amilogged/${localStorage.getItem('token')}`,{
+                'headers' : {
+                    'Content-Type' : 'application/json'
+                }
+            }).then(response=>{
+                if(response.status === 200){
+                    if(response.data.message == 'Yes'){
+                        
+                        this.setState({
+                            image : localStorage.getItem('image'),
+                            slno : localStorage.getItem('slno'),
+                            role : localStorage.getItem('role')
+                        
+                        });
+                    }else if(response.data.message == 'No'){
+                        
+                        localStorage.clear();
+                    }
+                }
+                console.log(this.state)
+            }).catch(error=>{console.log(error)})
+        }
+
     }
 
     render() {
