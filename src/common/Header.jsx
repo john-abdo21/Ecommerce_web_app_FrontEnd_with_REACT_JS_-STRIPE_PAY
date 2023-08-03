@@ -17,6 +17,7 @@ const LoginSeller = React.lazy(()=>import('../component/LoginSeller'));
 const LoginEmployee = React.lazy(()=>import('../component/LoginEmployee'));
 const RegUser = React.lazy(()=>import('../component/RegUser'));
 const RegSeller = React.lazy(()=>import('../component/RegSeller'));
+const VerifyEmail = React.lazy(()=>import('../component/VerifyEmail'));
 
 
 
@@ -46,14 +47,15 @@ export class Header extends Component {
         );
     }
 
-    componentDidMount(){
+    async componentDidMount(){
 
         if(localStorage.getItem('slno')){
-            axios.get(`/amilogged/${localStorage.getItem('token')}`,{
-                'headers' : {
-                    'Content-Type' : 'application/json'
-                }
-            }).then(response=>{
+            try{
+                const response = await axios.get(`/amilogged/${localStorage.getItem('token')}`,{
+                    'headers' : {
+                        'Content-Type' : 'application/json'
+                    }
+                });
                 if(response.status === 200){
                     if(response.data.message == 'Yes'){
                         
@@ -63,13 +65,16 @@ export class Header extends Component {
                             role : localStorage.getItem('role')
                         
                         });
+                        console.log(this.state)
                     }else if(response.data.message == 'No'){
                         
                         localStorage.clear();
                     }
                 }
-                console.log(this.state)
-            }).catch(error=>{console.log(error)})
+            }catch(error){
+                console.log(error)
+            }
+            
         }
 
     }
@@ -89,6 +94,7 @@ export class Header extends Component {
                             <Route exact path='/loginEmployee' component={()=>(<LoginEmployee />)} />
                             <Route exact path='/regUser' component={()=>(<RegUser />)} />
                             <Route exact path='/regSeller' component={()=>(<RegSeller/>)} />
+                            <Route exact path='/verifyEmail' component={()=>(<VerifyEmail/>)} />
 
                         </switch>
                     </Suspense>

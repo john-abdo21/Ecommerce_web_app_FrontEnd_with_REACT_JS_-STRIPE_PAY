@@ -221,6 +221,7 @@
 
 .txtshad{
     color: cyan;
+    text-shadow: 0 0 10px #00FFFF, 0 0 20px #00FFFF, 0 0 30px #00FFFF, 0 0 40px #00FFFF, 0 0 50px #00FFFF, 0 0 60px #00FFFF, 0 0 70px #00FFFF;
 
 }
 
@@ -275,3 +276,40 @@
     --bs-tooltip-color: cyan;
   }
   
+
+  .sizepanelnav{
+    display: flex;
+    
+    width: 85% !important;
+    height: 135% !important;
+
+  }  
+
+  .navuserimg{
+    display: block;
+    
+    width: 18% !important;
+    height: 86% !important;
+    border-radius: 1.1rem;
+    border-width: 0.13rem;
+    border-style: solid;
+    border-color: cyan;
+    animation : navprofpic 2s linear infinite;
+  }
+  @keyframes navprofpic {
+    0%{
+        box-shadow: none;
+    }
+    50%{
+        box-shadow: 0 0 20px 3px cyan;
+    }
+    100%{
+        box-shadow: none;
+    }
+  }
+ 
+  .imgprop{
+    width: 100% ;
+    height : 100%;
+    object-fit: cover;
+  }
