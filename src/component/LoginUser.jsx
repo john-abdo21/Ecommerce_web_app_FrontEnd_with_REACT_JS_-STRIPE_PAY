@@ -78,7 +78,7 @@ export class LoginUser extends Component {
                 <div className='row row-cols-1 row-cols-md-12 d-flex justify-content-center logintxt'>
                     <div className='col col-md-12 mb-5 alertshadw'>{this.renderMessage()}</div>
                 </div>
-                <form method="POST"  encType='multipart/form-data'>
+                <form method="POST">
                     <div className='row row-cols-1 row-cols-md-12 d-flex justify-content-center logintxt regformwidth'>
                         <div className='col col-md-7 mb-2'><input onChange={(e)=>{this.setState({email : e.target.value})}} className="form-control form-control-sm" type="text" placeholder="Email@" aria-label=".form-control-sm example" /></div>
                         <div className='col col-md-7 mb-3'><input onChange={(e)=>{this.setState({password : e.target.value})}} className="form-control form-control-sm" type="text" placeholder="Password" aria-label=".form-control-sm example" /></div>

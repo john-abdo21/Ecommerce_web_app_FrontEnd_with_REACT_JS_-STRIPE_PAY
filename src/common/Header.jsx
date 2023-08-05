@@ -5,6 +5,8 @@ import {
     Switch,
     Route,
     Link,
+    useParams,
+    useLocation,
     withRouter
     } from "react-router-dom";
 
@@ -18,8 +20,12 @@ const LoginEmployee = React.lazy(()=>import('../component/LoginEmployee'));
 const RegUser = React.lazy(()=>import('../component/RegUser'));
 const RegSeller = React.lazy(()=>import('../component/RegSeller'));
 const VerifyEmail = React.lazy(()=>import('../component/VerifyEmail'));
-
-
+const EditEmp = React.lazy(()=>import('../component/EditEmp'));
+const ChangeEmp = React.lazy(()=>import('../component/ChangeEmp'));
+const ProductTypeAdd = React.lazy(()=>import('../component/ProductTypeAdd'));
+const ProductBrandAdd = React.lazy(()=>import('../component/ProductBrandAdd'));
+const MainVerfSeller = React.lazy(()=>import('../component/MainVerfSeller'));
+const VerifySeller = React.lazy(()=>import('../component/VerifySeller'));
 
 export class Header extends Component {
     constructor(){
@@ -95,6 +101,12 @@ export class Header extends Component {
                             <Route exact path='/regUser' component={()=>(<RegUser />)} />
                             <Route exact path='/regSeller' component={()=>(<RegSeller/>)} />
                             <Route exact path='/verifyEmail' component={()=>(<VerifyEmail/>)} />
+                            <Route exact path='/editEmp' component={()=>(<EditEmp />)} />
+                            <Route exact path='/changeEmp/:empSlno' component={(props)=>(<ChangeEmp {...props}/>)} />
+                            <Route exact path='/productTypeAdd' component={()=>(<ProductTypeAdd />)} />
+                            <Route exact path='/productBrandAdd' component={()=>(<ProductBrandAdd />)} />
+                            <Route exact path='/verfSellerAll' component={()=>(<MainVerfSeller />)} />
+                            <Route exact path='/verfSeller/:sellerSln' component={(props)=>(<VerifySeller {...props}/>)} />
 
                         </switch>
                     </Suspense>

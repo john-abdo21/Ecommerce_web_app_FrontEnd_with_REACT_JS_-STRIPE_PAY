@@ -2,11 +2,18 @@
     .regformwidth{
         width: 70vw !important;
     }
+    
+.margintoptohold{
+    margin-top: 41rem !important;
+}
 }
 
 @media (min-width:375px) and (max-width:389px){
     .regformwidth{
         width: 70vw !important;
+    }
+    .margintoptohold{
+        margin-top: 41rem !important;
     }
 }
 
@@ -14,11 +21,17 @@
     .regformwidth{
         width: 70vw !important;
     }
+    .margintoptohold{
+        margin-top: 41rem !important;
+    }
 }
 
 @media (min-width:412px) and (max-width:539px){
     .regformwidth{
         width: 70vw !important;
+    }
+    .margintoptohold{
+        margin-top: 41rem !important;
     }
 }
 
@@ -26,11 +39,17 @@
     .regformwidth{
         width: 70vw !important;
     }
+    .margintoptohold{
+        margin-top: 41rem !important;
+    }
 }
 
 @media (min-width:768px) and (max-width:819px){
     .regformwidth{
         width: 80vw !important;
+    }
+    .mincardbd{
+        min-width: 28vw;
     }
 }
 
@@ -38,11 +57,17 @@
     .regformwidth{
         width: 80vw !important;
     }
+    .mincardbd{
+        min-width: 26vw;
+    }
 }
 
 @media (min-width:912px) and (max-width:1023px){
     .regformwidth{
         width: 80vw !important;
+    }
+    .mincardbd{
+        min-width: 26vw;
     }
 }
 
@@ -50,17 +75,27 @@
     .regformwidth{
         width: 45vw !important;
     }
+    .mincardbd{
+        min-width: 22vw;
+    }
 }
 
 @media (min-width:1280px) and (max-width:1365px){
     .regformwidth{
         width: 45vw !important;
     }
+    .mincardbd{
+        min-width: 18vw;
+    }
 }
 
 @media (min-width:1366px) and (max-width:1919px){
     .regformwidth{
         width: 45vw !important;
+    }
+
+    .mincardbd{
+        min-width: 16vw;
     }
 }
 
@@ -288,7 +323,7 @@
   .navuserimg{
     display: block;
     
-    width: 18% !important;
+    width: 13% !important;
     height: 86% !important;
     border-radius: 1.1rem;
     border-width: 0.13rem;
@@ -313,3 +348,137 @@
     height : 100%;
     object-fit: cover;
   }
+
+
+  .addEmp{
+    display : flex;
+    justify-content: center;
+    
+    height: 100vh;
+    background-color: #3c3c3c;
+    overflow: scroll;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+  .addEmp::-webkit-scrollbar {
+    display: none;
+  }
+  
+
+  .editEmp{
+    display: flex;
+    justify-content: center;
+    min-height: 100vh; /* Use min-height instead of height */
+    background-color: #3c3c3c;
+    overflow-y: auto; /* Use overflow-y: auto instead of overflow: scroll */
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+    border-top: solid cyan;
+
+  }
+  .editEmp::-webkit-scrollbar {
+    display: none;
+  }
+  
+
+  body{
+    overflow: scroll;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+  body::-webkit-scrollbar {
+    display: none;
+  }
+
+
+  .cardImg{
+    max-height: 20vh !important;
+    
+    object-fit: cover;
+  }
+
+  .cardanim{
+    transform: scale(1);
+    transition: all 2s ;
+  }
+  .cardanim:hover{
+    transform: scale(1.13);
+  }
+
+
+  .desbtn {
+    --bs-btn-padding-x: 0.5rem;
+    --bs-btn-padding-y: 0.05rem;
+    --bs-btn-font-family: ;
+    --bs-btn-font-size: 1rem;
+    --bs-btn-font-weight: 400;
+    --bs-btn-line-height: 1.5;
+    --bs-btn-color: var(--bs-body-color);
+    --bs-btn-bg: cyan;
+    --bs-btn-border-width: var(--bs-border-width);
+    --bs-btn-border-color: transparent;
+    --bs-btn-border-radius: var(--bs-border-radius);
+    --bs-btn-hover-border-color: transparent;
+    --bs-btn-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15),0 1px 1px rgba(0, 0, 0, 0.075);
+    --bs-btn-disabled-opacity: 0.65;
+    --bs-btn-focus-box-shadow: 0 0 0 0.25rem rgba(var(--bs-btn-focus-shadow-rgb), .5);
+    display: inline-block;
+    padding: var(--bs-btn-padding-y) var(--bs-btn-padding-x);
+    font-family: var(--bs-btn-font-family);
+    font-size: small;
+    font-weight: bold;
+    line-height: var(--bs-btn-line-height);
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    border: var(--bs-btn-border-width) solid rgb(19, 138, 138);
+    border-radius: 0.2rem;
+    background-color: var(--bs-btn-bg);
+    transition: all .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.desbtn:hover{
+    box-shadow: 0 0 25px 2px cyan;
+}
+
+.txtsize{
+    font-size: 0.7rem;
+}
+
+.boldcardtxt{
+    font-weight: bold;
+}
+
+
+.mainPrdTyp{
+    background-color: #3c3c3c;
+    min-height: 100vh;
+}
+
+.topborder{
+    border-top: solid cyan;
+}
+
+.bordcardbd{
+    border: 0.15rem solid cyan;
+    box-shadow: 0 0 15px 1px cyan;
+    animation: boxshad 2s linear infinite;
+
+}
+
+@keyframes boxshad {
+    0%{
+        box-shadow: none;
+    }
+    50%{
+        box-shadow: 0 0 15px 1px cyan;
+    }
+    100%{
+        box-shadow: none;
+    }
+}

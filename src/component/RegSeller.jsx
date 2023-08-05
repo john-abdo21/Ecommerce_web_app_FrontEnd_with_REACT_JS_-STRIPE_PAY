@@ -88,7 +88,7 @@ resUserCond = ()=>{
           </div>
           <form method="POST"  encType='multipart/form-data'>
               <div className='row row-cols-1 row-cols-md-12 d-flex justify-content-center logintxt regformwidth'>
-                  <div className='col col-md-5 mb-2'><input onChange={(e)=>{this.setState({name : e.target.value})}} className="form-control form-control-sm" type="text" placeholder="Full Name" aria-label=".form-control-sm example" /></div>
+                  <div className='col col-md-5 mb-2'><input onChange={(e)=>{this.setState({name : e.target.value})}} className="form-control form-control-sm" type="text" placeholder="First & Last Name" aria-label=".form-control-sm example" /></div>
                   <div className='col col-md-5 mb-2'><input onChange={(e)=>{this.setState({email : e.target.value})}} className="form-control form-control-sm" type="text" placeholder="Email@" aria-label=".form-control-sm example" /></div>
                   <div className='col col-md-5 mb-2'><input onChange={(e)=>{this.setState({dateofbirth : e.target.value})}} className="form-control form-control-sm" type="date" placeholder="Date of Birth" aria-label=".form-control-sm example" /></div>
                   <div className='col col-md-5 mb-2'><input onChange={(e)=>{this.setState({age : e.target.value})}} className="form-control form-control-sm" type="number" min="1" max="100" placeholder="Age" aria-label=".form-control-sm example" /></div>

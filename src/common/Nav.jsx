@@ -147,16 +147,16 @@ export class Nav extends Component {
 
 
                     {this.state.role == 'Employee' ? <div><li className="nav-item">
-                    <Link className="nav-link mx-auto" to="#"><BadgeIcon /> &nbsp;Edit Employee</Link>
+                    <Link className="nav-link mx-auto" to="/editEmp"><BadgeIcon /> &nbsp;Edit Employee</Link>
                   </li>
                   <li className="nav-item">
-                  <Link className="nav-link mx-auto" to="#"><AddReactionIcon /> &nbsp;Verify Sellers</Link>
+                  <Link className="nav-link mx-auto" to="/verfSellerAll"><AddReactionIcon /> &nbsp;Verify Sellers</Link>
                   </li> 
                   <li className="nav-item">
-                  <Link className="nav-link mx-auto" to="#"><CategoryIcon /> &nbsp;Add Product Types</Link>
+                  <Link className="nav-link mx-auto" to="/productTypeAdd"><CategoryIcon /> &nbsp;Add Product Types</Link>
                   </li> 
                   <li className="nav-item">
-                  <Link className="nav-link mx-auto" to="#"><AppleIcon /> &nbsp;Add Product Brands</Link>
+                  <Link className="nav-link mx-auto" to="/productBrandAdd"><AppleIcon /> &nbsp;Add Product Brands</Link>
                   </li> 
                   <li className="nav-item">
                   <Link className="nav-link mx-auto" to="#"><ReportIcon /> &nbsp;View Reports</Link>
