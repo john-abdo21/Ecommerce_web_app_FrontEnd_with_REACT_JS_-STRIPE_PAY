@@ -45,11 +45,11 @@ export class VerifyEmail extends Component {
 
     showCond = ()=>{
         if(this.state.resCondition != ''){
-            return  <div>
+            return  <div className='text-center'>
                 <p>{this.state.resCondition}</p>
             </div>
         }else{
-            return  <div>
+            return  <div className='text-center'>
             <p>Please Enter Valid Email and Verification Code ...</p>
             </div>
         }

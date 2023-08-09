@@ -53,7 +53,7 @@ export class MainVerfSeller extends Component {
                         <img src={perSeller.image} className='card-img-top cardImg'></img>
                         
                         <div className="card-body">
-                        <p className="card-title"><AccountCircleIcon /><span className='boldcardtxt'>{perSeller.name[0].toUpperCase()+perSeller.name.slice(1)}</span></p>
+                        <p className="card-title"><AccountCircleIcon /><span className='boldcardtxt fsize'>{perSeller.name[0].toUpperCase()+perSeller.name.slice(1)}</span></p>
                         <p className="card-text txtsize"><span className='boldcardtxt'>Email :</span> {perSeller.email}<br></br><span className='boldcardtxt'>Date of Birth :</span> {perSeller.date_of_birth.split('T',1)}<br></br><span className='boldcardtxt'>Gender :</span> {perSeller.gender[0].toUpperCase()+perSeller.gender.slice(1)} <br></br><span className='boldcardtxt'>Phone Number :</span> {perSeller.mobile} <br></br><span className='boldcardtxt'>Country :</span> {perSeller.country}<br></br><span className='boldcardtxt'>Address :<br></br></span> {perSeller.address}</p>
                         <Link to={'/verfSeller/'+perSeller.slno} class="desbtn btn-primary"><SettingsIcon fontSize='small' /> Check Seller</Link>
                         </div>

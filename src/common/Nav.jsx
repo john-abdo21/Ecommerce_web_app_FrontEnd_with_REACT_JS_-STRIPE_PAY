@@ -15,6 +15,7 @@ import AddReactionIcon from '@mui/icons-material/AddReaction';
 import ReportIcon from '@mui/icons-material/Report';
 import VerifiedIcon from '@mui/icons-material/Verified';
 import Face4Icon from '@mui/icons-material/Face4';
+import MenuIcon from '@mui/icons-material/Menu';
 
 
 import {
@@ -73,7 +74,7 @@ export class Nav extends Component {
           backgroundRepeat: 'no-repeat',
           backgroundPosition: 'center',
           backgroundSize: 'cover',
-        }}></div> <div className='col-7'>{this.state.email}</div></div></h5>
+        }}></div> <div className='col-7'>{this.state.role == 'Seller' ? <Link className='changelinkdes' to='/sellerChangeProfile'>{this.state.email}</Link> : this.state.role == 'User' ? <Link className='changelinkdes' to='/userChangeProfile'>{this.state.email}</Link> : this.state.role == 'Employee' ? this.state.email : null }</div></div></h5>
         
 
       
@@ -82,14 +83,16 @@ export class Nav extends Component {
       }
     }
 
+    
+
     render() {
         return (
             <Fragment>
-            <nav className="navbar middarkbg borderstylenav sticky-top">
+            <nav className="navbar middarkbg sticky-top">
             <div className="container-fluid">
               <Link className="navbar-brand txtshad mx-auto" to="/">EShopBD.com</Link>
               <button className="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-                <span className="navbar-toggler-icon"></span>
+                <span className="navbar-toggler-icon"><MenuIcon color="cyan"/></span>
               </button>
               <div className="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
                 <div className="offcanvas-header">
@@ -135,11 +138,20 @@ export class Nav extends Component {
 
 
                     {this.state.role == 'Seller'? <div><li className="nav-item">
-                    <Link className="nav-link mx-auto" to="#"><InventoryIcon /> &nbsp;Add Selling Product</Link>
+                    <Link className="nav-link mx-auto" to="/addProduct"><InventoryIcon /> &nbsp;Add Selling Product</Link>
                   </li>
                   <li className="nav-item">
-                  <Link className="nav-link mx-auto" to="#"><MenuBookIcon /> &nbsp;All My Products</Link>
+                  <Link className="nav-link mx-auto" to="/myProducts"><MenuBookIcon /> &nbsp;All My Products</Link>
                   </li> 
+                  <li className="nav-item">
+                  <Link className="nav-link mx-auto" to="/allServerEvents"><MenuBookIcon /> &nbsp;All Active Events</Link>
+                  </li> 
+                  <li className="nav-item">
+                  <Link className="nav-link mx-auto" to="/allEventsProductAdd"><MenuBookIcon /> &nbsp;Add Event Product</Link>
+                  </li>
+                  <li className="nav-item">
+                  <Link className="nav-link mx-auto" to="/myEventProducts"><MenuBookIcon /> &nbsp;My Event Products</Link>
+                  </li>
                   <li className="nav-item">
                   <Link className="nav-link mx-auto" to="#"><LocalShippingIcon /> &nbsp;All Customer Orders</Link>
                   </li> </div> : null}
@@ -157,6 +169,9 @@ export class Nav extends Component {
                   </li> 
                   <li className="nav-item">
                   <Link className="nav-link mx-auto" to="/productBrandAdd"><AppleIcon /> &nbsp;Add Product Brands</Link>
+                  </li> 
+                  <li className="nav-item">
+                  <Link className="nav-link mx-auto" to="/eventManage"><AppleIcon /> &nbsp;Add / Remove Events</Link>
                   </li> 
                   <li className="nav-item">
                   <Link className="nav-link mx-auto" to="#"><ReportIcon /> &nbsp;View Reports</Link>
@@ -191,7 +206,7 @@ export class Nav extends Component {
                   </li></div> : null }
                     
                     {this.state.role != '' ? <div><li className="nav-item">
-                    <Link className="nav-link mx-auto" to="#"><LogoutIcon /> &nbsp;Logout</Link>
+                    <Link className="nav-link mx-auto" to="/logoutPage"><LogoutIcon /> &nbsp;Logout</Link>
                     </li> </div> : null}
                     
 

@@ -127,7 +127,7 @@
     flex-grow: 1;
     padding: var(--bs-offcanvas-padding-y) var(--bs-offcanvas-padding-x);
     overflow-y: auto;
-    background-color: #3c3c3c;
+    background-color: #000000;
     
 }
 
@@ -136,7 +136,7 @@
     align-items: center;
     justify-content: space-between;
     padding: var(--bs-offcanvas-padding-y) var(--bs-offcanvas-padding-x);
-    background-color: #3c3c3c;
+    background-color: #000000;
 }
 
 .offcanvas-header .btn-close {
@@ -149,7 +149,7 @@
 }
 
 .middarkbg{
-    background-color: #3c3c3c;
+    background-color: #000000;
 
 }
 
@@ -189,12 +189,24 @@
     padding: var(--bs-navbar-toggler-padding-y) var(--bs-navbar-toggler-padding-x);
     font-size: var(--bs-navbar-toggler-font-size);
     line-height: 1;
-    color: var(--bs-navbar-color);
+    color: cyan;
     background-color: transparent;
-    background-color: cyan;
-    border: var(--bs-border-width) solid var(--bs-navbar-toggler-border-color);
+    background-color: transparent;
+    border: none !important;
     border-radius: var(--bs-navbar-toggler-border-radius);
     transition: var(--bs-navbar-toggler-transition);
+    text-shadow: 0 0 100px cyan;
+}
+
+.navbar-toggler-icon {
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    vertical-align: middle;
+    background-image: none !important;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
 }
 
 .btn-outline-info:hover{
@@ -218,7 +230,7 @@
 .navbar-nav .dropdown-menu {
     position: static;
     color: cyan;
-    background-color: #3c3c3c;
+    background-color: #000000;
 }
 
 .dropdown-item {
@@ -280,7 +292,7 @@
 .login{
     
     height: 100vh !important;
-    background-color: #3c3c3c;
+    background-color: #1b1b1b;
 }
 
 .colsdes{
@@ -355,7 +367,7 @@
     justify-content: center;
     
     height: 100vh;
-    background-color: #3c3c3c;
+    background-color: #1b1b1b;
     overflow: scroll;
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
@@ -369,7 +381,7 @@
     display: flex;
     justify-content: center;
     min-height: 100vh; /* Use min-height instead of height */
-    background-color: #3c3c3c;
+    background-color: #1b1b1b;
     overflow-y: auto; /* Use overflow-y: auto instead of overflow: scroll */
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none; /* Firefox */
@@ -456,7 +468,7 @@
 
 
 .mainPrdTyp{
-    background-color: #3c3c3c;
+    background-color: #1b1b1b;
     min-height: 100vh;
 }
 
@@ -481,4 +493,126 @@
     100%{
         box-shadow: none;
     }
+}
+
+
+.product{
+        
+    min-height: 100vh !important;
+    background-color: #1b1b1b;
+}
+
+.txtboxwidhigh{
+    
+    height: 15vh;
+    resize: none;
+}
+
+.bordandanim{
+    border: 0.2rem solid cyan;
+    box-shadow: 0 0 20px 1px cyan;
+    animation: animdes 2s linear infinite;
+}
+@keyframes animdes{
+    0%{
+        box-shadow: none;
+    }
+    50%{
+        box-shadow: 0 0 20px 1px cyan;
+    }
+    100%{
+        box-shadow: none;
+    }
+}
+
+
+.deschigh{
+    min-height: 1vh !important;
+    max-height: 2vh !important;
+    overflow: scroll;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  
+}
+
+
+.deschigh::-webkit-scrollbar {
+  display: none;
+}
+
+.description-container{
+    min-height: 13vh; /* Set the minimum height you want for the description */
+    max-height: 13vh;
+
+    overflow-y: auto; 
+}
+
+.fsize{
+    font-size: 0.75rem;
+}
+
+
+.logout{
+    min-height: 100vh !important;
+    background-color: #1b1b1b;
+    overflow: auto;
+    color : cyan;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+    text-shadow: 0 0 10px #00FFFF, 0 0 20px #00FFFF, 0 0 30px #00FFFF, 0 0 40px #00FFFF, 0 0 40px #00FFFF, 0 0 60px #00FFFF, 0 0 70px #00FFFF;
+}
+
+.changelinkdes{
+    color: cyan;
+    text-decoration: none;
+    transition: all 1.5s;
+}
+
+.changelinkdes:hover{
+    color: cyan;
+    text-decoration: none;
+    text-shadow: 0 0 10px #00FFFF, 0 0 20px #00FFFF, 0 0 30px #00FFFF, 0 0 40px #00FFFF, 0 0 40px #00FFFF, 0 0 60px #00FFFF, 0 0 70px #00FFFF;
+}
+
+.navbar {
+    position: sticky !important;
+    top: 0px !important;
+    --bs-navbar-padding-x: 0;
+    --bs-navbar-padding-y: 0.5rem;
+    --bs-navbar-color: rgba(var(--bs-emphasis-color-rgb), 0.65);
+    --bs-navbar-hover-color: rgba(var(--bs-emphasis-color-rgb), 0.8);
+    --bs-navbar-disabled-color: rgba(var(--bs-emphasis-color-rgb), 0.3);
+    --bs-navbar-active-color: rgba(var(--bs-emphasis-color-rgb), 1);
+    --bs-navbar-brand-padding-y: 0.3125rem;
+    --bs-navbar-brand-margin-end: 1rem;
+    --bs-navbar-brand-font-size: 1.25rem;
+    --bs-navbar-brand-color: rgba(var(--bs-emphasis-color-rgb), 1);
+    --bs-navbar-brand-hover-color: rgba(var(--bs-emphasis-color-rgb), 1);
+    --bs-navbar-nav-link-padding-x: 0.5rem;
+    --bs-navbar-toggler-padding-y: 0.25rem;
+    --bs-navbar-toggler-padding-x: 0.75rem;
+    --bs-navbar-toggler-font-size: 1.25rem;
+    --bs-navbar-toggler-icon-bg: url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2833, 37, 41, 0.75%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e);
+    --bs-navbar-toggler-border-color: rgba(var(--bs-emphasis-color-rgb), 0.15);
+    --bs-navbar-toggler-border-radius: var(--bs-border-radius);
+    --bs-navbar-toggler-focus-width: 0.25rem;
+    --bs-navbar-toggler-transition: box-shadow 0.15s ease-in-out;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 !important; 
+}
+
+.mainhome{
+    background-color: #1b1b1b;
+    min-height: 100vh;
+    overflow: auto;
+
+}
+
+.cardImg2{
+    max-height: 20vh !important;
+    object-fit: fill;
 }

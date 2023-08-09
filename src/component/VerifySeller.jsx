@@ -134,9 +134,9 @@ export class VerifySeller extends Component {
 
     showAfter = (e)=>{
         if(this.state.afterStatus != ''){
-            return  <div><p>{this.state.afterStatus}</p></div>
+            return  <div className='text-center'><p>{this.state.afterStatus}</p></div>
         }else{
-            return  <div><p>All Data Regarding Seller :</p></div>
+            return  <div className='text-center'><p>All Data Regarding Seller :</p></div>
         }
     }
   render() {

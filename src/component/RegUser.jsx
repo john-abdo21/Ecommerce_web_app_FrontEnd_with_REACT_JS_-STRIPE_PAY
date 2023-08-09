@@ -68,12 +68,12 @@ export class RegUser extends Component {
 
     resUserCond = ()=>{
         if(this.state.resCondition != ''){
-            return <div>
+            return <div className='text-center'>
                 <p>{this.state.resCondition}</p>
             </div>
         }else{
-            return <div>
-                <p>Please Enter Valid Email and Information ...<br/>Image Can only Be Jpg or Jpeg Formated.</p>
+            return <div className='text-center'>
+                <p>Please Enter Valid Email and Information ...<br/>Image Can only Be Jpg or Jpeg Formated.<br></br>Your Image & Mail Is Not Changeable in Future ... So, Be Careful.</p>
             </div>
         }
     }

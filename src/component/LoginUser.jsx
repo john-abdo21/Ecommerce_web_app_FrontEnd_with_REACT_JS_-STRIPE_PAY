@@ -57,11 +57,11 @@ export class LoginUser extends Component {
     }
     renderMessage=()=>{
         if(this.state.resData != ''){
-            return  <div>
+            return  <div className='text-center'>
                 <p>{this.state.resData}</p>
             </div>
         }else{
-            return <div>
+            return <div className='text-center'>
                 <p>Please Enter Valid Email and Password ...</p>
             </div>
         }

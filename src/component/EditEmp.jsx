@@ -42,11 +42,11 @@ export class EditEmp extends Component {
 
     resUserCond = ()=>{
         if(this.state.resCondition != ''){
-            return  <div>
+            return  <div className='text-center'>
                 <p>{this.state.resCondition}</p>
             </div>
         }else{
-            return  <div>
+            return  <div className='text-center'>
                 <p>Make Sure To Add Information Carefully And Don't Leave Any Field Empty ...</p>
             </div>
         }
@@ -143,7 +143,7 @@ export class EditEmp extends Component {
             <img src={perEmp.image} className='card-img-top cardImg'></img>
             
             <div className="card-body">
-              <p className="card-title"><AccountCircleIcon /><span className='boldcardtxt'>{perEmp.name[0].toUpperCase()+perEmp.name.slice(1)}</span></p>
+              <p className="card-title"><AccountCircleIcon /><span className='boldcardtxt fsize'>{perEmp.name[0].toUpperCase()+perEmp.name.slice(1)}</span></p>
               <p className="card-text txtsize"><span className='boldcardtxt'>Email :</span> {perEmp.email}<br></br><span className='boldcardtxt'>Gender :</span> {perEmp.gender[0].toUpperCase()+perEmp.gender.slice(1)} <br></br><span className='boldcardtxt'>Joining Date :</span> {perEmp.joined.split('T',1)}<br></br><span className='boldcardtxt'>Phone Number :</span> {perEmp.mobile} <br></br><span className='boldcardtxt'>Designation :</span> {perEmp.designation[0].toUpperCase()+perEmp.designation.slice(1)}<br></br><span className='boldcardtxt'>Sallery :</span> {perEmp.sallery}<br></br><span className='boldcardtxt'>Address :<br></br></span> {perEmp.address}</p>
               <Link to={'/changeEmp/'+perEmp.slno} class="desbtn btn-primary"><SettingsIcon fontSize='small' /> Edit</Link> <Link to="#" onClick={(e)=>{this.delEmp(e, perEmp.slno)}} className="desbtn btn-primary"><DeleteIcon fontSize='small' /> Delete</Link>
             </div>

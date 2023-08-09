@@ -41,11 +41,11 @@ export class ChangeEmp extends Component {
 
     resUserCond = ()=>{
         if(this.state.resCondition != ''){
-            return  <div>
+            return  <div className='text-center'>
                 <p>{this.state.resCondition}</p>
             </div>
         }else{
-            return  <div>
+            return  <div className='text-center'>
                 <p>Make Sure To Edit Information Carefully And Don't Leave Any Field Empty ...</p>
             </div>
         }
@@ -117,11 +117,12 @@ export class ChangeEmp extends Component {
     async componentDidMount(){
         const {empSlno} = this.props.match.params;
         try{
-            const response = await axios.get(`/parseEmp/${localStorage.getItem('slno')}/${empSlno}`,{
+            const res = await axios.get(`/parseEmp/${localStorage.getItem('slno')}/${empSlno}`,{
                 headers : {
                     'Content-Type' : 'application/json'
                 }
             });
+            const [response] = await Promise.all([res])
             if(response.status == 200){
 
             console.log(response.data)

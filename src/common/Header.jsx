@@ -26,6 +26,21 @@ const ProductTypeAdd = React.lazy(()=>import('../component/ProductTypeAdd'));
 const ProductBrandAdd = React.lazy(()=>import('../component/ProductBrandAdd'));
 const MainVerfSeller = React.lazy(()=>import('../component/MainVerfSeller'));
 const VerifySeller = React.lazy(()=>import('../component/VerifySeller'));
+const AddProduct = React.lazy(()=>import('../component/AddProduct'));
+const MyProduct = React.lazy(()=>import('../component/MyProduct'));
+const ChangeProduct = React.lazy(()=>import('../component/ChangeProduct'));
+const EvenManage = React.lazy(()=>import('../component/EvenManage'));
+const ServerActiveEvents = React.lazy(()=>import('../component/ServerActiveEvents'));
+const AllEventsProductAdd = React.lazy(()=>import('../component/AllEventsProductAdd'));
+const MyEventProduct = React.lazy(()=>import('../component/MyEventProduct'));
+const ChangeEventProduct = React.lazy(()=>import('../component/ChangeEventProduct'));
+const SellerChangeProfile = React.lazy(()=>import('../component/SellerChangeProfile'));
+const UserChangeProfile = React.lazy(()=>import('../component/UserChangeProfile'));
+const Home = React.lazy(()=>import('../component/Home'));
+
+
+const LogoutPage = React.lazy(()=>import('../component/LogoutPage'));
+
 
 export class Header extends Component {
     constructor(){
@@ -95,6 +110,7 @@ export class Header extends Component {
 
                     <Suspense fallback={this.BootstrapSpinnerLoader()}>
                         <switch>
+                            <Route exact path='/' component={()=>(<Home />)} />
                             <Route exact path='/loginUser' component={()=>(<LoginUser />)} />
                             <Route exact path='/loginSeller' component={()=>(<LoginSeller />)} />
                             <Route exact path='/loginEmployee' component={()=>(<LoginEmployee />)} />
@@ -105,8 +121,20 @@ export class Header extends Component {
                             <Route exact path='/changeEmp/:empSlno' component={(props)=>(<ChangeEmp {...props}/>)} />
                             <Route exact path='/productTypeAdd' component={()=>(<ProductTypeAdd />)} />
                             <Route exact path='/productBrandAdd' component={()=>(<ProductBrandAdd />)} />
+                            <Route exact path='/eventManage' component={()=>(<EvenManage />)} />
                             <Route exact path='/verfSellerAll' component={()=>(<MainVerfSeller />)} />
                             <Route exact path='/verfSeller/:sellerSln' component={(props)=>(<VerifySeller {...props}/>)} />
+                            <Route exact path='/addProduct' component={()=>(<AddProduct />)} />
+                            <Route exact path='/myProducts' component={()=>(<MyProduct />)} />
+                            <Route exact path='/myEventProducts' component={()=>(<MyEventProduct />)} />
+                            <Route exact path='/changeProduct/:productSln' component={(props)=>(<ChangeProduct {...props}/>)} />
+                            <Route exact path='/changeEventProduct/:productSln' component={(props)=>(<ChangeEventProduct {...props}/>)} />
+                            <Route exact path='/allServerEvents' component={()=>(<ServerActiveEvents />)} />
+                            <Route exact path='/allEventsProductAdd' component={()=>(<AllEventsProductAdd />)} />
+                            <Route exact path='/sellerChangeProfile' component={()=>(<SellerChangeProfile />)} />
+                            <Route exact path='/userChangeProfile' component={()=>(<UserChangeProfile />)} />
+
+                            <Route exact path='/logoutPage' component={()=>(<LogoutPage />)} />
 
                         </switch>
                     </Suspense>

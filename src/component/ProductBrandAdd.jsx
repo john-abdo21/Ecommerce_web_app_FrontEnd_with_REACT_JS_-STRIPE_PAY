@@ -24,23 +24,27 @@ export class ProductBrandAdd extends Component {
         this.state = {
             product : '',
             resData : '',
-            productTypes : []
+            productTypes : [],
+            image : null
         }
     }
     
     addProductType = async (e)=>{
         const formData = new FormData();
         formData.append('productType',this.state.product);
+        formData.append('image',this.state.image);
+
         try{
             const response = await axios.post(`/appProductBrand/${localStorage.getItem('slno')}`, formData, {
                 headers : {
-                    'Content-Type' : 'application/json'
+                    'Content-Type' : 'multipart/form-data'
                 }
             });
 
             if(response.data.message == 'Successfully Added Product Brand ...'){
                 this.setState({
-                    product : ''
+                    product : '',
+                    image : null
                 })
 
                 const inpfield = document.querySelectorAll('input[type="text"]');
@@ -63,11 +67,11 @@ export class ProductBrandAdd extends Component {
 
     renderMessage=()=>{
         if(this.state.resData != ''){
-            return  <div>
+            return  <div className='text-center'>
                 <p>{this.state.resData}</p>
             </div>
         }else{
-            return <div>
+            return <div className='text-center'>
                 <p>Please Enter New Product Brand :</p>
             </div>
         }
@@ -137,9 +141,9 @@ export class ProductBrandAdd extends Component {
                 <form method="POST">
                     <div className='row row-cols-1 row-cols-md-12 d-flex justify-content-center logintxt regformwidth'>
                         <div className='col col-md-7 mb-2'><input onChange={(e)=>{this.setState({product : e.target.value})}} className="form-control form-control-sm" type="text" placeholder="Add Product Brand" aria-label=".form-control-sm example" /></div>
+                        <div className='col col-md-7 mb-2'><input onChange={(e)=>{this.setState({image : e.target.files[0]})}} className="form-control form-control-sm" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-custom-class="custom-tooltip" data-bs-title="Insert Product Brand Image in Jpg or Jpeg." id="formFileSm" type="file" /></div>
                         
-                        
-                        <div className='col col-md-3 d-flex justify-content-center mb-3'><button onClick={(e)=>{this.addProductType(e)}} type="button" class="btn btn-sm btn-outline-info"><ProductionQuantityLimitsIcon /> Add Product</button></div>
+                        <div className='col col-md-6 d-flex justify-content-center mt-3 mb-3'><button onClick={(e)=>{this.addProductType(e)}} type="button" class="btn btn-sm btn-outline-info"><ProductionQuantityLimitsIcon /> Add Product</button></div>
                         
 
                     </div>
