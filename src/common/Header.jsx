@@ -13,6 +13,7 @@ import {
 import axios from 'axios';    
 
 import Nav from './Nav';
+import Footer from '../component/Footer';
 
 const LoginUser = React.lazy(()=>import('../component/LoginUser'));
 const LoginSeller = React.lazy(()=>import('../component/LoginSeller'));
@@ -37,7 +38,7 @@ const ChangeEventProduct = React.lazy(()=>import('../component/ChangeEventProduc
 const SellerChangeProfile = React.lazy(()=>import('../component/SellerChangeProfile'));
 const UserChangeProfile = React.lazy(()=>import('../component/UserChangeProfile'));
 const Home = React.lazy(()=>import('../component/Home'));
-
+const ViewTerms = React.lazy(()=>import('../component/ViewTerms'));
 
 const LogoutPage = React.lazy(()=>import('../component/LogoutPage'));
 
@@ -135,9 +136,15 @@ export class Header extends Component {
                             <Route exact path='/userChangeProfile' component={()=>(<UserChangeProfile />)} />
 
                             <Route exact path='/logoutPage' component={()=>(<LogoutPage />)} />
+                            <Route exact path='/viewTerms' component={()=>(<ViewTerms />)} />
+
+                            
 
                         </switch>
                     </Suspense>
+                    <Footer />
+
+                    
 
                 </Fragment>
             </Router>

@@ -1,4 +1,20 @@
 @media (min-width:350px) and (max-width:374px){
+    .cashdel{
+        min-width: 17vw;
+        max-width: 17vw;
+        max-height: 14vw;
+        min-height: 14vw;
+    
+    }
+
+
+    .carousel-innerval {
+        position: relative !important;
+        width: 100% !important;
+        max-height: 39vw !important;
+        overflow: hidden !important;
+    }
+    
     .regformwidth{
         width: 70vw !important;
     }
@@ -6,90 +22,832 @@
 .margintoptohold{
     margin-top: 41rem !important;
 }
+
+    
+                                
+.carselevent{
+    width: 90vw;
+    height: 75vw;
+   
+    
+    margin-top: 5vw;
+}
+.carsbord{
+    border: 0.15rem solid cyan;
+}
+.carousel-inner {
+    
+    position: relative;
+    width: 100%;
+    max-height: 75vw !important;
+    overflow: hidden;
+}
+
+.carousel-item {
+    position: relative;
+    display: none;
+    float: left;
+    width: 100%;
+    height: 75vw;
+    margin-right: -100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transition: transform .6s ease-in-out;
+}
+
+.carousel-caption {
+    position: absolute;
+    top: 4.5rem;
+    right: 15%;
+    bottom: 7.25rem;
+    left: 15%;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    color: #fff;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.carshead{
+    font-size: 1.4rem;
+    line-height: 0.75rem;
+}
+
+.mainhome{
+    background-color: #1b1b1b;
+    min-height: 46vh;
+    overflow: auto;
+
+}
+
 }
 
 @media (min-width:375px) and (max-width:389px){
+    .cashdel{
+        min-width: 17vw;
+        max-width: 17vw;
+        max-height: 14vw;
+        min-height: 14vw;
+    
+    }
+
+    .carousel-innerval {
+        position: relative !important;
+        width: 100% !important;
+        max-height: 39vw !important;
+        overflow: hidden !important;
+    }
+
     .regformwidth{
         width: 70vw !important;
     }
     .margintoptohold{
         margin-top: 41rem !important;
     }
+
+        
+                                
+.carselevent{
+    width: 90vw;
+    height: 65vw;
+   
+    
+    margin-top: 5vw;
+}
+.carsbord{
+    border: 0.15rem solid cyan;
+}
+.carousel-inner {
+    
+    position: relative;
+    width: 100%;
+    max-height: 65vw !important;
+    overflow: hidden;
+}
+
+.carousel-item {
+    position: relative;
+    display: none;
+    float: left;
+    width: 100%;
+    height: 65vw;
+    margin-right: -100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transition: transform .6s ease-in-out;
+}
+
+.carousel-caption {
+    position: absolute;
+    top: 4.5rem;
+    right: 15%;
+    bottom: 7.25rem;
+    left: 15%;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    color: #fff;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.carshead{
+    font-size: 1.4rem;
+    line-height: 0.75rem;
+}
+
+.mainhome{
+    background-color: #1b1b1b;
+    min-height: 46vh;
+    overflow: auto;
+
+}
+
 }
 
 @media (min-width:390px) and (max-width:411px){
+    .cashdel{
+        min-width: 17vw;
+        max-width: 17vw;
+        max-height: 14vw;
+        min-height: 14vw;
+    
+    }
+    .carousel-innerval {
+        position: relative !important;
+        width: 100% !important;
+        max-height: 39vw !important;
+        overflow: hidden !important;
+    }
+
     .regformwidth{
         width: 70vw !important;
     }
     .margintoptohold{
         margin-top: 41rem !important;
     }
+
+    
+                                
+.carselevent{
+    width: 90vw;
+    height: 65vw;
+   
+    
+    margin-top: 5vw;
+}
+.carsbord{
+    border: 0.15rem solid cyan;
+}
+.carousel-inner {
+    
+    position: relative;
+    width: 100%;
+    max-height: 65vw !important;
+    overflow: hidden;
+}
+
+.carousel-item {
+    position: relative;
+    display: none;
+    float: left;
+    width: 100%;
+    height: 65vw;
+    margin-right: -100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transition: transform .6s ease-in-out;
+}
+
+.carousel-caption {
+    position: absolute;
+    top: 4.5rem;
+    right: 15%;
+    bottom: 7.25rem;
+    left: 15%;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    color: #fff;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.carshead{
+    font-size: 1.4rem;
+    line-height: 0.75rem;
+}
+
+
+.mainhome{
+    background-color: #1b1b1b;
+    min-height: 40vh;
+    overflow: auto;
+
+}
 }
 
 @media (min-width:412px) and (max-width:539px){
+    .cashdel{
+        min-width: 17vw;
+        max-width: 17vw;
+        max-height: 14vw;
+        min-height: 14vw;
+    
+    }
+    .carousel-innerval {
+        position: relative !important;
+        width: 100% !important;
+        max-height: 41vw !important;
+        overflow: hidden !important;
+    }
     .regformwidth{
         width: 70vw !important;
     }
     .margintoptohold{
         margin-top: 41rem !important;
     }
+
+                                
+.carselevent{
+    width: 90vw;
+    height: 60vw;
+   
+    
+    margin-top: 5vw;
+}
+.carsbord{
+    border: 0.15rem solid cyan;
+}
+.carousel-inner {
+    
+    position: relative;
+    width: 100%;
+    max-height: 60vw !important;
+    overflow: hidden;
+}
+
+.carousel-item {
+    position: relative;
+    display: none;
+    float: left;
+    width: 100%;
+    height: 65vw;
+    margin-right: -100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transition: transform .6s ease-in-out;
+}
+
+.carousel-caption {
+    position: absolute;
+    top: 4.5rem;
+    right: 15%;
+    bottom: 7.25rem;
+    left: 15%;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    color: #fff;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.carshead{
+    font-size: 1.4rem;
+    line-height: 0.75rem;
+}
+
+
+.mainhome{
+    background-color: #1b1b1b;
+    min-height: 36vh;
+    overflow: auto;
+
+}
 }
 
 @media (min-width:540px) and (max-width:767px){
+    .cashdel{
+        min-width: 12vw;
+        max-width: 12vw;
+        max-height: 8vw;
+        min-height: 8vw;
+    
+    }
+    .carousel-innerval {
+        position: relative !important;
+        width: 100% !important;
+        max-height: 27vw !important;
+        overflow: hidden !important;
+    }
+
     .regformwidth{
         width: 70vw !important;
     }
     .margintoptohold{
         margin-top: 41rem !important;
     }
+
+                            
+.carselevent{
+    width: 80vw;
+    height: 45vw;
+   
+    
+    margin-top: 5vw;
+}
+.carsbord{
+    border: 0.15rem solid cyan;
+}
+.carousel-inner {
+    
+    position: relative;
+    width: 100%;
+    max-height: 45vw !important;
+    overflow: hidden;
+}
+
+.carousel-item {
+    position: relative;
+    display: none;
+    float: left;
+    width: 100%;
+    height: 45vw;
+    margin-right: -100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transition: transform .6s ease-in-out;
+}
+
+.carousel-caption {
+    position: absolute;
+    top: 4.5rem;
+    right: 15%;
+    bottom: 7.25rem;
+    left: 15%;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    color: #fff;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.carshead{
+    font-size: 2rem;
+    line-height: 0.75rem;
+}
+
+
+.mainhome{
+    background-color: #1b1b1b;
+    min-height: 45vh;
+    overflow: auto;
+
+}
+
 }
 
 @media (min-width:768px) and (max-width:819px){
+    .cashdel{
+        min-width: 6vw;
+        max-width: 6vw;
+        max-height: 5vw;
+        min-height: 5vw;
+    
+    }
+    
+.cardbgdisp{
+    max-width: 40vw;
+    margin-left: 1rem;
+}
+    .carousel-innerval {
+        position: relative !important;
+        width: 100% !important;
+        max-height: 17vw !important;
+        overflow: hidden !important;
+    }
+
     .regformwidth{
         width: 80vw !important;
     }
     .mincardbd{
         min-width: 28vw;
     }
+
+                        
+.carselevent{
+    width: 80vw;
+    height: 45vw;
+   
+    
+    margin-top: 3vw;
+}
+.carsbord{
+    border: 0.15rem solid cyan;
+}
+.carousel-inner {
+    
+    position: relative;
+    width: 100%;
+    max-height: 45vw !important;
+    overflow: hidden;
+}
+
+.carousel-item {
+    position: relative;
+    display: none;
+    float: left;
+    width: 100%;
+    height: 45vw;
+    margin-right: -100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transition: transform .6s ease-in-out;
+}
+
+.carousel-caption {
+    position: absolute;
+    top: 7rem;
+    right: 15%;
+    bottom: 7.25rem;
+    left: 15%;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    color: #fff;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.carshead{
+    font-size: 2rem;
+}
+
+.mainhome{
+    background-color: #1b1b1b;
+    min-height: 45vh;
+    overflow: auto;
+
+}
+
 }
 
 @media (min-width:820px) and (max-width:911px){
+
+    .cashdel{
+        min-width: 6vw;
+        max-width: 6vw;
+        max-height: 5vw;
+        min-height: 5vw;
+    
+    }
+    
+.cardbgdisp{
+    max-width: 40vw;
+    margin-left: 1rem;
+}
+    .carousel-innerval {
+        position: relative !important;
+        width: 100% !important;
+        max-height: 17vw !important;
+        overflow: hidden !important;
+    }
+
     .regformwidth{
         width: 80vw !important;
     }
     .mincardbd{
         min-width: 26vw;
     }
+
+                    
+.carselevent{
+    width: 80vw;
+    height: 45vw;
+   
+    
+    margin-top: 3vw;
+}
+.carsbord{
+    border: 0.15rem solid cyan;
+}
+.carousel-inner {
+    
+    position: relative;
+    width: 100%;
+    max-height: 45vw !important;
+    overflow: hidden;
+}
+
+.carousel-item {
+    position: relative;
+    display: none;
+    float: left;
+    width: 100%;
+    height: 45vw;
+    margin-right: -100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transition: transform .6s ease-in-out;
+}
+
+.carousel-caption {
+    position: absolute;
+    top: 8rem;
+    right: 15%;
+    bottom: 7.25rem;
+    left: 15%;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    color: #fff;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.carshead{
+    font-size: 2rem;
+}
+
+
+.mainhome{
+    background-color: #1b1b1b;
+    min-height: 40vh;
+    overflow: auto;
+
+}
+
 }
 
 @media (min-width:912px) and (max-width:1023px){
+    .cashdel{
+        min-width: 6vw;
+        max-width: 6vw;
+        max-height: 5vw;
+        min-height: 5vw;
+    
+    }
+    
+.cardbgdisp{
+    max-width: 40vw;
+    margin-left: 1rem;
+}
+    .carousel-innerval {
+        position: relative !important;
+        width: 100% !important;
+        max-height: 18vw !important;
+        overflow: hidden !important;
+    }
     .regformwidth{
         width: 80vw !important;
     }
     .mincardbd{
         min-width: 26vw;
     }
+
+                
+.carselevent{
+    width: 80vw;
+    height: 45vw;
+   
+    
+    margin-top: 3vw;
+}
+.carsbord{
+    border: 0.15rem solid cyan;
+}
+.carousel-inner {
+    
+    position: relative;
+    width: 100%;
+    max-height: 45vw !important;
+    overflow: hidden;
+}
+
+.carousel-item {
+    position: relative;
+    display: none;
+    float: left;
+    width: 100%;
+    height: 45vw;
+    margin-right: -100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transition: transform .6s ease-in-out;
+}
+
+.carousel-caption {
+    position: absolute;
+    top: 9.5rem;
+    right: 15%;
+    bottom: 7.25rem;
+    left: 15%;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    color: #fff;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.carshead{
+    font-size: 2rem;
+}
+
+.mainhome{
+    background-color: #1b1b1b;
+    min-height: 40vh;
+    overflow: auto;
+
+}
+
+
 }
 
 @media (min-width:1024px) and (max-width:1279px){
+    .cashdel{
+        min-width: 6vw;
+        max-width: 6vw;
+        max-height: 5vw;
+        min-height: 5vw;
+    
+    }
+    
+.cardbgdisp{
+    max-width: 40vw;
+    margin-left: 1rem;
+}
+    .carousel-innerval {
+        position: relative !important;
+        width: 100% !important;
+        max-height: 13vw !important;
+        overflow: hidden !important;
+    }
+
     .regformwidth{
         width: 45vw !important;
     }
     .mincardbd{
         min-width: 22vw;
     }
+
+            
+.carselevent{
+    width: 80vw;
+    height: 30vw;
+   
+    
+    margin-top: 3vw;
+}
+.carsbord{
+    border: 0.15rem solid cyan;
+}
+.carousel-inner {
+    
+    position: relative;
+    width: 100%;
+    max-height: 30vw !important;
+    overflow: hidden;
+}
+
+.carousel-item {
+    position: relative;
+    display: none;
+    float: left;
+    width: 100%;
+    height: 30vw;
+    margin-right: -100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transition: transform .6s ease-in-out;
+}
+
+.carousel-caption {
+    position: absolute;
+    top: 4.5rem;
+    right: 15%;
+    bottom: 7.25rem;
+    left: 15%;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    color: #fff;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.carshead{
+    font-size: 2rem;
+}
+
+.mainhome{
+    background-color: #1b1b1b;
+    min-height: 65vh;
+    overflow: auto;
+
+}
 }
 
 @media (min-width:1280px) and (max-width:1365px){
+    .cashdel{
+        min-width: 6vw;
+        max-width: 6vw;
+        max-height: 5vw;
+        min-height: 5vw;
+    
+    }
+    
+.cardbgdisp{
+    max-width: 40vw;
+    margin-left: 1rem;
+}
+    .carousel-innerval {
+        position: relative !important;
+        width: 100% !important;
+        max-height: 10vw !important;
+        overflow: hidden !important;
+    }
+
     .regformwidth{
         width: 45vw !important;
     }
     .mincardbd{
         min-width: 18vw;
     }
+
+        
+.carselevent{
+    width: 80vw;
+    height: 30vw;
+   
+    
+    margin-top: 3vw;
+}
+.carsbord{
+    border: 0.15rem solid cyan;
+}
+.carousel-inner {
+    
+    position: relative;
+    width: 100%;
+    max-height: 30vw !important;
+    overflow: hidden;
+}
+
+.carousel-item {
+    position: relative;
+    display: none;
+    float: left;
+    width: 100%;
+    height: 30vw;
+    margin-right: -100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transition: transform .6s ease-in-out;
+}
+
+.carousel-caption {
+    position: absolute;
+    top: 8rem;
+    right: 15%;
+    bottom: 7.25rem;
+    left: 15%;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    color: #fff;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.carshead{
+    font-size: 2rem;
+}
+
+
+.mainhome{
+    background-color: #1b1b1b;
+    min-height: 80vh;
+    overflow: auto;
+
+}
+
+
 }
 
 @media (min-width:1366px) and (max-width:1919px){
+    .cashdel{
+        min-width: 6vw;
+        max-width: 6vw;
+        max-height: 5vw;
+        min-height: 5vw;
+    
+    }
+    
+.cardbgdisp{
+    max-width: 40vw;
+    margin-left: 1rem;
+}
+    .carousel-innerval {
+        position: relative !important;
+        width: 100% !important;
+        max-height: 10vw !important;
+        overflow: hidden !important;
+    }
+
     .regformwidth{
         width: 45vw !important;
     }
@@ -97,18 +855,218 @@
     .mincardbd{
         min-width: 16vw;
     }
+
+    
+.carselevent{
+    width: 80vw;
+    height: 30vw;
+   
+    
+    margin-top: 3vw;
+}
+.carousel-inner {
+    border: 0.15rem solid cyan;
+    position: relative;
+    width: 100%;
+    max-height: 30vw !important;
+    overflow: hidden;
+}
+
+.carousel-item {
+    position: relative;
+    display: none;
+    float: left;
+    width: 100%;
+    height: 30vw;
+    margin-right: -100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transition: transform .6s ease-in-out;
+}
+
+.carousel-caption {
+    position: absolute;
+    right: 15%;
+    bottom: 7.25rem;
+    left: 15%;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    color: #fff;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.carshead{
+    font-size: 2rem;
+}
+
+.mainhome{
+    background-color: #1b1b1b;
+    min-height: 90vh;
+    overflow: auto;
+
+}
+
+
 }
 
 @media (min-width:1920px) and (max-width:2559px){
+    .cashdel{
+        min-width: 6vw;
+        max-width: 6vw;
+        max-height: 5vw;
+        min-height: 5vw;
+    
+    }
+    
+.cardbgdisp{
+    max-width: 40vw;
+    margin-left: 1rem;
+}
+    .carousel-innerval {
+        position: relative !important;
+        width: 100% !important;
+        max-height: 10vw !important;
+        overflow: hidden !important;
+    }
+
     .regformwidth{
         width: 45vw !important;
     }
+    
+    .mainhome{
+        background-color: #1b1b1b;
+        min-height: 85vh;
+        overflow: auto;
+    
+    }
+.carselevent{
+    width: 80vw;
+    height: 30vw;
+   
+    
+    margin-top: 3vw;
+}
+.carsbord{
+    border: 0.15rem solid cyan;
+}
+.carousel-inner {
+    
+    position: relative;
+    width: 100%;
+    max-height: 30vw !important;
+    overflow: hidden;
+}
+
+.carousel-item {
+    position: relative;
+    display: none;
+    float: left;
+    width: 100%;
+    height: 30vw;
+    margin-right: -100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transition: transform .6s ease-in-out;
+}
+
+.carousel-caption {
+    position: absolute;
+    right: 15%;
+    bottom: 7.25rem;
+    left: 15%;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    color: #fff;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.carshead{
+    font-size: 2rem;
+}
+
+
+
 }
 
 @media (min-width:3840px) and (max-width:8000px){
+    .cashdel{
+        min-width: 6vw;
+        max-width: 6vw;
+        max-height: 5vw;
+        min-height: 5vw;
+    
+    }
+    
+.cardbgdisp{
+    max-width: 40vw;
+    margin-left: 1rem;
+}
+    .carousel-innerval {
+        position: relative !important;
+        width: 100% !important;
+        max-height: 10vw !important;
+        overflow: hidden !important;
+    }
     .regformwidth{
         width: 45vw !important;
     }
+
+    .mainhome{
+        background-color: #1b1b1b;
+        min-height: 75vh;
+        overflow: auto;
+    
+    }
+        
+.carselevent{
+    width: 80vw;
+    height: 30vw;
+   
+    
+    margin-top: 3vw;
+}
+.carsbord{
+    border: 0.15rem solid cyan;
+}
+.carousel-inner {
+    
+    position: relative;
+    width: 100%;
+    max-height: 30vw !important;
+    overflow: hidden;
+}
+
+.carousel-item {
+    position: relative;
+    display: none;
+    float: left;
+    width: 100%;
+    height: 30vw;
+    margin-right: -100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transition: transform .6s ease-in-out;
+}
+
+.carousel-caption {
+    position: absolute;
+    right: 15%;
+    bottom: 7.25rem;
+    left: 15%;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    color: #fff;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.carshead{
+    font-size: 2rem;
+}
+
+
 }
 
 
@@ -388,6 +1346,19 @@
     border-top: solid cyan;
 
   }
+
+  .editEmp2{
+    display: flex;
+    justify-content: center;
+    min-height: 100vh; /* Use min-height instead of height */
+    background-color: #1b1b1b;
+    overflow-y: auto; /* Use overflow-y: auto instead of overflow: scroll */
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+   
+
+  }
+
   .editEmp::-webkit-scrollbar {
     display: none;
   }
@@ -403,10 +1374,12 @@
   }
 
 
-  .cardImg{
-    max-height: 20vh !important;
-    
+  .cardImg2{
+    min-height: 14vh !important;
+    max-height: 14vh !important;
     object-fit: cover;
+ 
+
   }
 
   .cardanim{
@@ -481,6 +1454,24 @@
     box-shadow: 0 0 15px 1px cyan;
     animation: boxshad 2s linear infinite;
 
+}
+
+.bordcardbd2{
+    
+    box-shadow: 0 0 15px 1px cyan;
+    animation: boxshad 2s linear infinite;
+    background-color: #000000;
+    color:cyan;
+    border-radius: 0.7rem;
+}
+
+.bordcardbd3{
+
+    box-shadow: 0 0 15px 1px cyan;
+    animation: boxshad 2s linear infinite;
+
+    color:cyan;
+    border-radius: 0.7rem;
 }
 
 @keyframes boxshad {
@@ -605,14 +1596,139 @@
     padding: 0 !important; 
 }
 
-.mainhome{
-    background-color: #1b1b1b;
-    min-height: 100vh;
+
+.cardImg{
+    max-height: 20vh !important;
+    object-fit: fill;
+}
+
+
+
+
+
+
+.objft{
+    width: 100%;
+    height : 100%;
+    background-position: center !important;
+    object-fit: cover !important;
+}
+
+.carousel-indicators [data-bs-target] {
+    box-sizing: content-box;
+    flex: 0 1 auto;
+    width: 0.3rem;
+    height: 3px;
+    padding: 0;
+    margin-right: 3px;
+    margin-left: 3px;
+    text-indent: -999px;
+    cursor: pointer;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 0;
+    border-top: 10px solid transparent;
+    border-radius: 7rem;
+    border-bottom: 10px solid transparent;
+    opacity: .5;
+    transition: opacity .6s ease;
+}
+
+.timerhight{
+    background-color: cyan;
+    min-height: 10vh;
     overflow: auto;
 
 }
 
-.cardImg2{
-    max-height: 20vh !important;
-    object-fit: fill;
+.prdtypebox{
+    background-color: #1b1b1b;
+    min-height: 100vh;
+    overflow: auto;
+}
+
+.prdtyphight{
+    background-color: #1b1b1b;
+    min-height: 60vh;
+    overflow: auto;
+}
+
+.homeptsz{
+    font-size: 1.5rem;
+}
+
+.fntblk{
+    color: #000;
+}
+
+.txtshad2{
+    font-size: 1.3rem;
+    color: rgb(0, 0, 0);
+    text-shadow: 0 0 10px #00FFFF, 0 0 20px #00FFFF, 0 0 30px #00FFFF, 0 0 40px #00FFFF, 0 0 50px #00FFFF, 0 0 60px #00FFFF, 0 0 70px #00FFFF;
+}
+
+
+.active>.page-link, .page-link.active {
+    z-index: 3;
+    color: black;
+    background-color: cyan;
+    border-color: var(--bs-pagination-active-border-color);
+}
+
+.evbtn{
+    color: black;
+    text-decoration: none;
+}
+
+.cardrev{
+    
+    background-color: black;
+    color: cyan;
+    border: solid cyan;
+    text-shadow: 0 0 18px cyan, 0 0 18px cyan, 0 0 18px cyan; 
+    
+}
+
+.fntsizerev{
+    font-size: 0.8rem;
+}
+
+.picsiz{
+    max-width: 28vw;
+   
+}
+
+.footdes{
+    background-color: cyan;
+    color : black;
+    display: flex;
+    justify-content: center;
+    min-height: 20vh;
+}
+
+.footcarddes{
+    background-color: cyan;
+    color: black;
+    border : none !important;
+}
+
+.cardfootfont{
+    font-size: 0.7rem;
+}
+
+.viewterms{
+    background-color: #1b1b1b;
+    min-height: 100vh !important;
+}
+
+.fontterm{
+    color : cyan;
+    text-align: justify;
+    text-shadow: 0 0 10px cyan;
+}
+
+.undrln{
+    text-decoration: underline;
+    text-underline-offset: 1rem;
+    text-shadow: 0 0 10px cyan, 0 0 10px cyan ;
 }

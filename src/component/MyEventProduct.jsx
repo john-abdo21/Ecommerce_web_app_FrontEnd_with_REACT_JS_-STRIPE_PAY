@@ -81,7 +81,7 @@ export class MyEventProduct extends Component {
 
 
             <div id={'carouselExampleControls-'+perEmp.slno} className="carousel slide" data-bs-ride="carousel">
-            <div className="carousel-inner">
+            <div className="carousel-innerval">
                 <div className="carousel-item active">
                 <img src={perEmp.image1} className="d-block w-100 cardImg" alt="..." />
                 </div>
