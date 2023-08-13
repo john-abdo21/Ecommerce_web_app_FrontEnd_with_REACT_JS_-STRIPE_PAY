@@ -1732,3 +1732,35 @@
     text-underline-offset: 1rem;
     text-shadow: 0 0 10px cyan, 0 0 10px cyan ;
 }
+
+.homereview{
+    transform: scale(1);
+    transition: all 1.5s;
+}
+
+.homereview:hover{
+    transform: scale(1.1);
+    z-index: 200;
+}
+
+.carseltext{
+    text-shadow: 0 0 18px cyan, 0 0 18px cyan, 0 0 18px cyan; 
+}
+
+.reviewmain{
+    min-height: 100vh;
+    overflow: auto;
+    background-color: #1b1b1b;
+}
+
+.homerevbox{
+    max-height: 7vh;
+    overflow: scroll;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+
+}
+
+.homerevbox::-webkit-scrollbar {
+  display: none;
+}

@@ -39,8 +39,13 @@ const SellerChangeProfile = React.lazy(()=>import('../component/SellerChangeProf
 const UserChangeProfile = React.lazy(()=>import('../component/UserChangeProfile'));
 const Home = React.lazy(()=>import('../component/Home'));
 const ViewTerms = React.lazy(()=>import('../component/ViewTerms'));
-
+const ReviewPage = React.lazy(()=>import('../component/ReviewPage'));
 const LogoutPage = React.lazy(()=>import('../component/LogoutPage'));
+const ViewEventProd = React.lazy(()=>import('../component/ViewEventProd'));
+const VeiwTypeProd = React.lazy(()=>import('../component/VeiwTypeProd'));
+const ViewBrandProd = React.lazy(()=>import('../component/ViewBrandProd'));
+
+
 
 
 export class Header extends Component {
@@ -137,8 +142,12 @@ export class Header extends Component {
 
                             <Route exact path='/logoutPage' component={()=>(<LogoutPage />)} />
                             <Route exact path='/viewTerms' component={()=>(<ViewTerms />)} />
+                            <Route exact path='/reviewPage' component={()=>(<ReviewPage role={this.state.role}/>)} />
+                            <Route exact path='/viewserverProductEvents/:sln' component={(props)=>(<ViewEventProd {...props}/>)} />
+                            <Route exact path='/viewserverProductType/:sln' component={(props)=>(<VeiwTypeProd {...props}/>)} /> 
+                            <Route exact path='/viewserverProductBrand/:sln' component={(props)=>(<ViewBrandProd {...props}/>)} />
 
-                            
+
 
                         </switch>
                     </Suspense>

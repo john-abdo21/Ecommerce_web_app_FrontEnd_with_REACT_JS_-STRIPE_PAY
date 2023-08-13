@@ -114,8 +114,8 @@ export class Home extends Component {
         return    <div className="carousel-item active" data-bs-interval="4000">
       <img src={eachev.event_image} className="d-block w-100 objft" alt="..." />
       <div className="carousel-caption d-block d-md-block">
-        <h5 className='carshead'>{eachev.event}</h5>
-        <p>{eachev.event_details} ...Till {eachev.event_end.split('T',1)}</p>
+        <h5 className='carshead carseltext'>{eachev.event}</h5>
+        <p className="carseltext">{eachev.event_details} ...Till {eachev.event_end.split('T',1)}</p>
         <button type="button" className="btn btn-sm btn-info"><Link to={'/viewserverProductEvents/'+eachev.slno} className="btn-primary evbtn">Shop Now</Link></button>
       </div>
     </div>
@@ -123,8 +123,8 @@ export class Home extends Component {
         return    <div className="carousel-item" data-bs-interval="3000">
       <img src={eachev.event_image} className="d-block w-100 objft" alt="..." />
       <div className="carousel-caption d-block d-md-block">
-        <h5 className='carshead'>{eachev.event}</h5>
-        <p>{eachev.event_details} ...Till {eachev.event_end.split('T',1)}</p>
+        <h5 className='carshead carseltext'>{eachev.event}</h5>
+        <p className='carseltext'>{eachev.event_details} ...Till {eachev.event_end.split('T',1)}</p>
         <button type="button" className="btn btn-sm btn-info"><Link to={'/viewserverProductEvents/'+eachev.slno} className="btn-primary evbtn">Shop Now</Link></button>
       </div>
     </div>
@@ -202,7 +202,7 @@ showReviewData = ()=>{
 
   return  this.state.serverReview.map((perEvent)=>{
 
-      return   <div className="card mb-3 cardrev cardbgdisp">
+      return   <div className="card mb-3 cardrev cardbgdisp homereview">
       <div className="row row-cols-1 row-cols-md-6 g-0">
         <div className="col mt-3 mt-md-0 mx-auto col-md-1 d-flex justify-content-center align-items-center picsiz">
           <img src={perEvent.image} className="img-fluid cardImg" alt="..." />
@@ -210,7 +210,7 @@ showReviewData = ()=>{
         <div className="col col-md-11">
           <div className="card-body">
             <h5 className="card-title">{perEvent.usermail}</h5>
-            <p className="card-text fntsizerev">{perEvent.comment}</p>
+            <p className="card-text fntsizerev homerevbox">{perEvent.comment}</p>
             <p className="card-text"><StarRatings
         rating={perEvent.rating}
         starRatedColor="cyan"

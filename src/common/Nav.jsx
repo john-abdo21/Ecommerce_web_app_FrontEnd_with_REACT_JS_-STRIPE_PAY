@@ -35,7 +35,9 @@ export class Nav extends Component {
           isLoggedIn: false,
           email: '',
           image: '',
-          role : ''
+          role : '',
+          prdType : [],
+          prdBrand : []
         }
         
 
@@ -45,6 +47,30 @@ export class Nav extends Component {
       if (localStorage.getItem('token')) {
         
         try {
+          const response2 = await axios.get('/getPrdTyp', {
+            headers : {
+              'Content-Type' : 'application/json'
+            }
+          });
+          if(response2.data.message == 'Successful'){
+            this.setState({
+              prdType : response2.data.allType
+            });
+          }
+
+          const response3 = await axios.get('/getPrdBrnd', {
+            headers : {
+              'Content-Type' : 'application/json'
+            }
+          });
+          if(response3.data.message == 'Successful'){
+            this.setState({
+              prdBrand : response3.data.allBrand
+            });
+          }
+
+
+
           const response = await axios.get(`/navprofile/${localStorage.getItem('token')}`, {
             headers: {
               'Content-Type': 'application.json'
@@ -64,6 +90,22 @@ export class Nav extends Component {
         }
       }
     
+    }
+
+    showType=()=>{
+      if(this.state.prdType.length>0){
+        return  this.state.prdType.map((peritem)=>{
+          return  <div key={peritem.slno}><li><Link className="dropdown-item" to={'/viewserverProductType/'+peritem.slno}>{peritem.type}</Link></li></div>
+        })
+      }
+    }
+
+    showBrand=()=>{
+      if(this.state.prdBrand.length>0){
+        return  this.state.prdBrand.map((peritem)=>{
+          return  <div key={peritem.slno}><li><Link className="dropdown-item" to={'/viewserverProductBrand/'+peritem.slno}>{peritem.type}</Link></li></div>
+        })
+      }
     }
 
     renderNavProfileLink = ()=>{
@@ -111,12 +153,9 @@ export class Nav extends Component {
                       <CategoryIcon/> &nbsp;Product Type
                     </Link>
                     <ul className="dropdown-menu">
-                      <li><Link className="dropdown-item" to="#">Action</Link></li>
-                      <li><Link className="dropdown-item" to="#">Another action</Link></li>
-                      <li>
-                        <hr className="dropdown-divider" />
-                      </li>
-                      <li><Link className="dropdown-item" to="#">Something else here</Link></li>
+                      {this.showType()}
+                      
+                      
                     </ul>
                   </li>
                   <li className="nav-item dropdown">
@@ -124,12 +163,8 @@ export class Nav extends Component {
                       <AppleIcon /> &nbsp;Product Brands
                     </Link>
                     <ul className="dropdown-menu">
-                      <li><Link className="dropdown-item" to="#">Action</Link></li>
-                      <li><Link className="dropdown-item" to="#">Another action</Link></li>
-                      <li>
-                        <hr className="dropdown-divider" />
-                        <li><Link className="dropdown-item" to="#">Something else here</Link></li>
-                      </li>
+                      {this.showBrand()}
+                      
                       
                     </ul>
                   </li></div> : null}
@@ -215,9 +250,10 @@ export class Nav extends Component {
                     </li></div> : null}
                      
 
-                    <li className="nav-item">
-                    <Link className="nav-link mx-auto mt-5" to="#"><InfoIcon /> &nbsp;Review Us</Link>
-                    </li> 
+                    {this.state.role == 'User' || this.state.role =='Seller' ? <div><li className="nav-item">
+                    <Link className="nav-link mx-auto mt-5" to="/reviewPage"><InfoIcon /> &nbsp;Review Us</Link>
+                    </li> </div> : null}
+                    
                   </ul>
                   
                   
