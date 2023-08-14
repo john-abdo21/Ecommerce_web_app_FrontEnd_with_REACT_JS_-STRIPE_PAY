@@ -250,7 +250,7 @@ showProductData = ()=>{
 
 
   return  totalPosts.map((perEmp)=>{
-      return   <div className='col mb-5 mincardbd mx-auto' key={perEmp.slno}>
+      return   <div className='col mb-5 mincardbd' key={perEmp.slno}>
       <div className="card cardanim bordandanim">
      
 

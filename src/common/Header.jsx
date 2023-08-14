@@ -44,8 +44,8 @@ const LogoutPage = React.lazy(()=>import('../component/LogoutPage'));
 const ViewEventProd = React.lazy(()=>import('../component/ViewEventProd'));
 const VeiwTypeProd = React.lazy(()=>import('../component/VeiwTypeProd'));
 const ViewBrandProd = React.lazy(()=>import('../component/ViewBrandProd'));
-
-
+const NormalProductAdd = React.lazy(()=>import('../component/NormalProductAdd'));
+const EventProductAdd = React.lazy(()=>import('../component/EventProductAdd'));
 
 
 export class Header extends Component {
@@ -146,8 +146,10 @@ export class Header extends Component {
                             <Route exact path='/viewserverProductEvents/:sln' component={(props)=>(<ViewEventProd {...props}/>)} />
                             <Route exact path='/viewserverProductType/:sln' component={(props)=>(<VeiwTypeProd {...props}/>)} /> 
                             <Route exact path='/viewserverProductBrand/:sln' component={(props)=>(<ViewBrandProd {...props}/>)} />
-
-
+                            
+                            
+                            <Route exact path='/viewserverProduct/:sln' component={(props)=>(<NormalProductAdd {...props}/>)} />
+                            <Route exact path='/viewserverEventProduct/:sln' component={(props)=>(<EventProductAdd {...props}/>)} />
 
                         </switch>
                     </Suspense>

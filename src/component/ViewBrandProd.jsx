@@ -124,7 +124,7 @@ export class ViewBrandProd extends Component {
 
     async componentDidUpdate(prevProps){
         const {sln} = this.props.match.params;
-        if(prevProps.sln != sln){
+        if(prevProps.match.params.sln !== sln){
             this.componentDidMount();
         }
     }

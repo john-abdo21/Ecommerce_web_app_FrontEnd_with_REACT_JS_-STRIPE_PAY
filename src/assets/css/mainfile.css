@@ -1,4 +1,20 @@
 @media (min-width:350px) and (max-width:374px){
+    .pwidth{
+        padding: 2rem !important;
+        border: 0.045rem solid cyan;
+        max-width: 80vw;
+        word-break: break-all;
+    }
+    .cart{
+        max-height : 26vh !important;
+    }  
+    .imgfill{
+        height: 100%;
+        min-width: 80vw;
+        object-fit: fill;
+        background-position: center;
+    }
+
     .cashdel{
         min-width: 17vw;
         max-width: 17vw;
@@ -83,6 +99,21 @@
 }
 
 @media (min-width:375px) and (max-width:389px){
+    .pwidth{
+        padding: 2rem !important;
+        border: 0.045rem solid cyan;
+        max-width: 80vw;
+        word-break: break-all;
+    }
+    .cart{
+        max-height : 26vh !important;
+    }  
+    .imgfill{
+        height: 100%;
+        min-width: 80vw;
+        object-fit: fill;
+        background-position: center;
+    }
     .cashdel{
         min-width: 17vw;
         max-width: 17vw;
@@ -165,6 +196,21 @@
 }
 
 @media (min-width:390px) and (max-width:411px){
+    .pwidth{
+        padding: 2rem !important;
+        border: 0.045rem solid cyan;
+        max-width: 80vw;
+        word-break: break-all;
+    }
+    .cart{
+        max-height : 26vh !important;
+    }  
+    .imgfill{
+        height: 100%;
+        min-width: 80vw;
+        object-fit: fill;
+        background-position: center;
+    }
     .cashdel{
         min-width: 17vw;
         max-width: 17vw;
@@ -246,6 +292,21 @@
 }
 
 @media (min-width:412px) and (max-width:539px){
+    .pwidth{
+        padding: 2rem !important;
+        border: 0.045rem solid cyan;
+        max-width: 80vw;
+        word-break: break-all;
+    }
+    .cart{
+        max-height : 26vh !important;
+    }  
+    .imgfill{
+        height: 100%;
+        min-width: 80vw;
+        object-fit: fill;
+        background-position: center;
+    }
     .cashdel{
         min-width: 17vw;
         max-width: 17vw;
@@ -325,6 +386,21 @@
 }
 
 @media (min-width:540px) and (max-width:767px){
+    .pwidth{
+        padding: 3rem !important;
+        border: 0.045rem solid cyan;
+        max-width: 80vw;
+        word-break: break-all;
+    }
+    .cart{
+        max-height : 26vh !important;
+    }  
+    .imgfill{
+        height: 100%;
+        min-width: 80vw;
+        object-fit: fill;
+        background-position: center;
+    }
     .cashdel{
         min-width: 12vw;
         max-width: 12vw;
@@ -406,6 +482,21 @@
 }
 
 @media (min-width:768px) and (max-width:819px){
+    .pwidth{
+        padding: 3rem !important;
+        border: 0.045rem solid cyan;
+        max-width: 80vw;
+        word-break: break-all;
+    }
+    .cart{
+        max-height : 26vh !important;
+    }  
+    .imgfill{
+        height: 100%;
+        min-width: 80vw;
+        object-fit: fill;
+        background-position: center;
+    }
     .cashdel{
         min-width: 6vw;
         max-width: 6vw;
@@ -490,6 +581,21 @@
 }
 
 @media (min-width:820px) and (max-width:911px){
+    .pwidth{
+        padding: 3rem !important;
+        border: 0.045rem solid cyan;
+        max-width: 80vw;
+        word-break: break-all;
+    }
+    .cart{
+        max-height : 26vh !important;
+    }  
+    .imgfill{
+        height: 100%;
+        min-width: 80vw;
+        object-fit: fill;
+        background-position: center;
+    }
 
     .cashdel{
         min-width: 6vw;
@@ -576,6 +682,21 @@
 }
 
 @media (min-width:912px) and (max-width:1023px){
+    .pwidth{
+        padding: 3rem !important;
+        border: 0.045rem solid cyan;
+        max-width: 80vw;
+        word-break: break-all;
+    }
+    .cart{
+        max-height : 26vh !important;
+    }  
+    .imgfill{
+        height: 100%;
+        min-width: 80vw;
+        object-fit: fill;
+        background-position: center;
+    }
     .cashdel{
         min-width: 6vw;
         max-width: 6vw;
@@ -660,6 +781,21 @@
 }
 
 @media (min-width:1024px) and (max-width:1279px){
+    .pwidth{
+        padding: 3rem !important;
+        border: 0.045rem solid cyan;
+        max-width: 50vw;
+        word-break: break-all;
+    }
+    .cart{
+        max-height : 30vh !important;
+    }   
+    .imgfill{
+        height: 100%;
+        min-width: 50vw;
+        object-fit: fill;
+        background-position: center;
+    }
     .cashdel{
         min-width: 6vw;
         max-width: 6vw;
@@ -743,6 +879,21 @@
 }
 
 @media (min-width:1280px) and (max-width:1365px){
+    .pwidth{
+        padding: 3rem !important;
+        border: 0.045rem solid cyan;
+        max-width: 50vw;
+        word-break: break-all;
+    }
+    .cart{
+        max-height : 36vh !important;
+    }  
+    .imgfill{
+        height: 100%;
+        min-width: 50vw;
+        object-fit: fill;
+        background-position: center;
+    }
     .cashdel{
         min-width: 6vw;
         max-width: 6vw;
@@ -829,6 +980,21 @@
 }
 
 @media (min-width:1366px) and (max-width:1919px){
+    .pwidth{
+        padding: 3rem !important;
+        border: 0.045rem solid cyan;
+        max-width: 50vw;
+        word-break: break-all;
+    }
+    .cart{
+        max-height : 36vh !important;
+    }  
+    .imgfill{
+        height: 100%;
+        min-width: 50vw;
+        object-fit: fill;
+        background-position: center;
+    }
     .cashdel{
         min-width: 6vw;
         max-width: 6vw;
@@ -911,6 +1077,21 @@
 }
 
 @media (min-width:1920px) and (max-width:2559px){
+    .pwidth{
+        padding: 3rem !important;
+        border: 0.045rem solid cyan;
+        max-width: 50vw;
+        word-break: break-all;
+    }
+    .cart{
+        max-height : 36vh !important;
+    }  
+    .imgfill{
+        height: 100%;
+        min-width: 50vw;
+        object-fit: fill;
+        background-position: center;
+    }
     .cashdel{
         min-width: 6vw;
         max-width: 6vw;
@@ -991,6 +1172,21 @@
 }
 
 @media (min-width:3840px) and (max-width:8000px){
+    .pwidth{
+        padding: 3rem !important;
+        border: 0.045rem solid cyan;
+        max-width: 50vw;
+        word-break: break-all;
+    }
+    .cart{
+        max-height : 36vh !important;
+    }  
+    .imgfill{
+        height: 100%;
+        min-width: 50vw;
+        object-fit: fill;
+        background-position: center;
+    }
     .cashdel{
         min-width: 6vw;
         max-width: 6vw;
@@ -1763,4 +1959,48 @@
 
 .homerevbox::-webkit-scrollbar {
   display: none;
+}
+
+.mainfrontprd{
+    background-color: #1b1b1b;
+    min-height: 100vh !important;
+    overflow: auto;
+    
+}
+
+
+
+.boxdes{
+    border: 0.035rem solid cyan;
+    box-shadow: 0 0 52px -12px cyan;
+}
+
+.cartaddfont{
+    color: cyan;
+}
+
+.glowef{
+     
+    animation : txtglow 2s linear infinite;
+}
+@keyframes txtglow{
+    0%{
+        text-shadow: 0 0 18px cyan; 
+    }
+    50%{
+        text-shadow: 0 0 18px cyan, 0 0 18px cyan, 0 0 18px cyan; 
+    }
+    100%{
+        text-shadow: 0 0 18px cyan; 
+    }
+}
+
+.ptransfrm{
+    background-color: #000000;
+    border-radius: 0.45rem;
+    transform: scale(1);
+    transition: all 2s;
+}
+.ptransfrm:hover{
+    transform : scale(1.1);
 }

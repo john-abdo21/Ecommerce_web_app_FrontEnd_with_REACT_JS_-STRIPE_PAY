@@ -84,7 +84,7 @@ export class LoginUser extends Component {
                         <div className='col col-md-7 mb-3'><input onChange={(e)=>{this.setState({password : e.target.value})}} className="form-control form-control-sm" type="text" placeholder="Password" aria-label=".form-control-sm example" /></div>
                         <div className='col col-md-10 d-flex justify-content-center smaline'>Are You A Seller ? Login Here ... &nbsp;<Link className='loginLink' to='/loginSeller'>click me</Link></div>
                         <div className='col col-md-10 d-flex justify-content-center mb-3 smaline'>Are You A Employee Login Here ... &nbsp;<Link className='loginLink' to='/loginEmployee'>click me</Link></div>
-                        <div className='col col-md-10 d-flex justify-content-center mb-3'><button onClick={(e)=>{this.logindata(e)}} type="button" class="btn btn-sm btn-outline-info"><Face6Icon /> Login</button></div>
+                        <div className='col col-md-10 d-flex justify-content-center mb-3'><button onClick={(e)=>{this.logindata(e)}} type="button" className="btn btn-sm btn-outline-info"><Face6Icon /> Login</button></div>
                         <div className='col col-md-10 d-flex justify-content-center mb-2 smaline'>Forgot Password ? ... &nbsp; <Link className='loginLink' to='/forgotPass'>click me</Link></div>
 
                     </div>
