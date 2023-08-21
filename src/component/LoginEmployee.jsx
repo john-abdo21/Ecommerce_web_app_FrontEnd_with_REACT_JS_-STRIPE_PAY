@@ -56,12 +56,12 @@ export class LoginEmployee extends Component {
     }
     renderMessage=()=>{
         if(this.state.resData != ''){
-            return  <div className='text-center'>
+            return  <div className='text-center headfont'>
                 <p>{this.state.resData}</p>
             </div>
         }else{
-            return <div className='text-center'>
-                <p>Please Enter Valid Email and Password ...</p>
+            return <div className='text-center headfont'>
+                <h4>Please Enter Valid Email and Password ...</h4>
             </div>
         }
     }
@@ -78,11 +78,11 @@ export class LoginEmployee extends Component {
                 </div>
                 <form method="POST"  encType='multipart/form-data'>
                     <div className='row row-cols-1 row-cols-md-12 d-flex justify-content-center logintxt regformwidth'>
-                        <div className='col col-md-7 mb-2'><input onChange={(e)=>{this.setState({email : e.target.value})}} className="form-control form-control-sm" type="text" placeholder="Email@" aria-label=".form-control-sm example" /></div>
-                        <div className='col col-md-7 mb-3'><input onChange={(e)=>{this.setState({password : e.target.value})}} className="form-control form-control-sm" type="text" placeholder="Password" aria-label=".form-control-sm example" /></div>
+                        <div className='col col-md-7 mb-2'><input onChange={(e)=>{this.setState({email : e.target.value})}} className="form-control form-control-sm frmshape" type="text" placeholder="Email@" aria-label=".form-control-sm example" /></div>
+                        <div className='col col-md-7 mb-3'><input onChange={(e)=>{this.setState({password : e.target.value})}} className="form-control form-control-sm frmshape" type="text" placeholder="Password" aria-label=".form-control-sm example" /></div>
                         <div className='col col-md-10 d-flex justify-content-center smaline'>Looking For Buying ? Login Here ... &nbsp;<Link className='loginLink' to='/loginUser'>click me</Link></div>
                         <div className='col col-md-10 d-flex justify-content-center mb-3 smaline'>Are You A Seller ? Login Here ... &nbsp;<Link className='loginLink' to='/loginSeller'>click me</Link></div>
-                        <div className='col col-md-10 d-flex justify-content-center mb-3'><button onClick={(e)=>{this.logindata(e)}} type="button" class="btn btn-sm btn-outline-info"><Face6Icon /> Login</button></div>
+                        <div className='col col-md-10 d-flex justify-content-center mb-3'><button onClick={(e)=>{this.logindata(e)}} type="button" class="btn btn-sm btn-outline-info bdfont"><Face6Icon /> Login</button></div>
                         <div className='col col-md-10 d-flex justify-content-center mb-2 smaline'>Forgot Password ? ... &nbsp; <Link className='loginLink' to='/forgotPass'>click me</Link></div>
 
                     </div>

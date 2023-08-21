@@ -46,6 +46,17 @@ const VeiwTypeProd = React.lazy(()=>import('../component/VeiwTypeProd'));
 const ViewBrandProd = React.lazy(()=>import('../component/ViewBrandProd'));
 const NormalProductAdd = React.lazy(()=>import('../component/NormalProductAdd'));
 const EventProductAdd = React.lazy(()=>import('../component/EventProductAdd'));
+const SeeAllSearchPrd = React.lazy(()=>import('../component/SeeAllSearchPrd'));
+
+const SeeAllCart = React.lazy(()=>import('../component/SeeAllCart'));
+const GoBackHome = React.lazy(()=>import('../component/GoBackHome'));
+const AllMyCusOrd = React.lazy(()=>import('../component/AllMyCusOrd'));
+const AllConfirmedOrders = React.lazy(()=>import('../component/AllConfirmedOrders'));
+const SpecificDelivery = React.lazy(()=>import('../component/SpecificDelivery'));
+const HandleReports = React.lazy(()=>import('../component/HandleReports'));
+const   ForgotPass = React.lazy(()=>import('../component/ForgotPass'));
+
+
 
 
 export class Header extends Component {
@@ -116,7 +127,7 @@ export class Header extends Component {
 
                     <Suspense fallback={this.BootstrapSpinnerLoader()}>
                         <switch>
-                            <Route exact path='/' component={()=>(<Home />)} />
+                            <Route exact path='/' component={()=>(<Home componentId={1} />)} />
                             <Route exact path='/loginUser' component={()=>(<LoginUser />)} />
                             <Route exact path='/loginSeller' component={()=>(<LoginSeller />)} />
                             <Route exact path='/loginEmployee' component={()=>(<LoginEmployee />)} />
@@ -130,8 +141,8 @@ export class Header extends Component {
                             <Route exact path='/eventManage' component={()=>(<EvenManage />)} />
                             <Route exact path='/verfSellerAll' component={()=>(<MainVerfSeller />)} />
                             <Route exact path='/verfSeller/:sellerSln' component={(props)=>(<VerifySeller {...props}/>)} />
-                            <Route exact path='/addProduct' component={()=>(<AddProduct />)} />
-                            <Route exact path='/myProducts' component={()=>(<MyProduct />)} />
+                            <Route exact path='/addProduct' component={()=>(<AddProduct componentId={8} />)} />
+                            <Route exact path='/myProducts' component={()=>(<MyProduct  componentId={9} />)} />
                             <Route exact path='/myEventProducts' component={()=>(<MyEventProduct />)} />
                             <Route exact path='/changeProduct/:productSln' component={(props)=>(<ChangeProduct {...props}/>)} />
                             <Route exact path='/changeEventProduct/:productSln' component={(props)=>(<ChangeEventProduct {...props}/>)} />
@@ -143,13 +154,23 @@ export class Header extends Component {
                             <Route exact path='/logoutPage' component={()=>(<LogoutPage />)} />
                             <Route exact path='/viewTerms' component={()=>(<ViewTerms />)} />
                             <Route exact path='/reviewPage' component={()=>(<ReviewPage role={this.state.role}/>)} />
-                            <Route exact path='/viewserverProductEvents/:sln' component={(props)=>(<ViewEventProd {...props}/>)} />
-                            <Route exact path='/viewserverProductType/:sln' component={(props)=>(<VeiwTypeProd {...props}/>)} /> 
-                            <Route exact path='/viewserverProductBrand/:sln' component={(props)=>(<ViewBrandProd {...props}/>)} />
+                            <Route exact path='/viewserverProductEvents/:sln' component={(props)=>(<ViewEventProd  componentId={2}  {...props}/>)} />
+                            <Route exact path='/viewserverProductType/:sln' component={(props)=>(<VeiwTypeProd  componentId={3}     {...props}/>)} /> 
+                            <Route exact path='/viewserverProductBrand/:sln' component={(props)=>(<ViewBrandProd  componentId={4}   {...props}/>)} />
                             
                             
                             <Route exact path='/viewserverProduct/:sln' component={(props)=>(<NormalProductAdd {...props}/>)} />
                             <Route exact path='/viewserverEventProduct/:sln' component={(props)=>(<EventProductAdd {...props}/>)} />
+
+                            <Route exact path='/searchDataPage/:sln' component={(props)=>(<SeeAllSearchPrd  componentId={5}     {...props}/>)} />
+                            <Route exact path='/seeAllCart' component={()=>(<SeeAllCart componentId={6} />)}/>
+                            <Route exact path='/successPage' component={()=>(<GoBackHome />)} />
+                            <Route exact path='/allmycustomerorder' component={()=>(<AllMyCusOrd />)} />
+                            <Route exact path='/allconfirmedOrders' component={()=>(<AllConfirmedOrders />)} />
+                            <Route exact path='/checkDelivery/:slno' component={(props)=>(<SpecificDelivery componentId={7} {...props}/>)} />
+
+                            <Route exact path='/handleReports' component={()=>(<HandleReports />)} />
+                            <Route exact path='/forgotPass' component={()=>(<ForgotPass />)} />
 
                         </switch>
                     </Suspense>

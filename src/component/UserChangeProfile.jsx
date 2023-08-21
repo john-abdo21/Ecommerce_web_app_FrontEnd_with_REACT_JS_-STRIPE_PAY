@@ -63,11 +63,11 @@ export class UserChangeProfile extends Component {
 
     resUserCond = ()=>{
         if(this.state.resCondition != ''){
-            return <div className='text-center'>
+            return <div className='text-center headfont'>
                 <p>{this.state.resCondition}</p>
             </div>
         }else{
-            return <div className='text-center'>
+            return <div className='text-center headfont'>
                 <p className='mx-auto'>Please Enter Valid Email and Information ...<br/>Image Can only Be Jpg or Jpeg Formated.<br></br>Your Image, Mail & Password Is Not Changeable Due To Security Reasons...</p>
             </div>
         }
@@ -120,25 +120,25 @@ export class UserChangeProfile extends Component {
                     </div>
                     <form method="POST"  encType='multipart/form-data'>
                         <div className='row row-cols-1 row-cols-md-12 d-flex justify-content-center logintxt regformwidth'>
-                            <div className='col col-md-5 mb-2'><input onChange={(e)=>{this.setState({name : e.target.value})}} value={this.state.name} autocomplete="off" className="form-control form-control-sm" type="text" placeholder="First & Last Name" aria-label=".form-control-sm example" /></div>
+                            <div className='col col-md-5 mb-2'><input onChange={(e)=>{this.setState({name : e.target.value})}} value={this.state.name} autocomplete="off" className="form-control form-control-sm frmshape" type="text" placeholder="First & Last Name" aria-label=".form-control-sm example" /></div>
                           
-                            <div className='col col-md-5 mb-2'><input onChange={(e)=>{this.setState({dateofbirth : e.target.value})}} value={this.state.dateofbirth} autocomplete="off" className="form-control form-control-sm" type="date" placeholder="Date of Birth" aria-label=".form-control-sm example" /></div>
-                            <div className='col col-md-5 mb-2'><input onChange={(e)=>{this.setState({age : e.target.value})}} value={this.state.age} autocomplete="off" className="form-control form-control-sm" type="number" min="1" max="100" placeholder="Age" aria-label=".form-control-sm example" /></div>
-                            <div className='col col-md-5 mb-2'><select onChange={(e)=>{this.setState({gender : e.target.value})}} value={this.state.gender} autocomplete="off" class="form-select" aria-label="Default select example">
+                            <div className='col col-md-5 mb-2'><input onChange={(e)=>{this.setState({dateofbirth : e.target.value})}} value={this.state.dateofbirth} autocomplete="off" className="form-control form-control-sm frmshape" type="date" placeholder="Date of Birth" aria-label=".form-control-sm example" /></div>
+                            <div className='col col-md-5 mb-2'><input onChange={(e)=>{this.setState({age : e.target.value})}} value={this.state.age} autocomplete="off" className="form-control form-control-sm frmshape" type="number" min="1" max="100" placeholder="Age" aria-label=".form-control-sm example" /></div>
+                            <div className='col col-md-5 mb-2'><select onChange={(e)=>{this.setState({gender : e.target.value})}} value={this.state.gender} autocomplete="off" className="form-select frmshape" aria-label="Default select example">
                             <option selected disabled>Gender</option>
                             <option value="Male">Male</option>
                             <option value="Female">Female</option>
                             <option value="Others">Others</option>
                             </select></div>
-                            <div className='col col-md-5 mb-2'><input onChange={(e)=>{this.setState({country : e.target.value})}} value={this.state.country} autocomplete="off" className="form-control form-control-sm" type="text" placeholder="Country" aria-label=".form-control-sm example" /></div>
-                            <div className='col col-md-5 mb-2'><input onChange={(e)=>{this.setState({address : e.target.value})}} value={this.state.address} autocomplete="off" className="form-control form-control-sm" type="text" placeholder="Address" aria-label=".form-control-sm example" /></div>
-                            <div className='col col-md-5 mb-2'><input onChange={(e)=>{this.setState({delivery : e.target.value})}} value={this.state.delivery} autocomplete="off" className="form-control form-control-sm" type="text" placeholder="Delivery Address" aria-label=".form-control-sm example" /></div>
-                            <div className='col col-md-5 mb-2'><input onChange={(e)=>{this.setState({phoneNumber : e.target.value})}} value={this.state.phoneNumber} autocomplete="off" className="form-control form-control-sm" type="text" placeholder="Phone Number" aria-label=".form-control-sm example" /></div>
+                            <div className='col col-md-5 mb-2'><input onChange={(e)=>{this.setState({country : e.target.value})}} value={this.state.country} autocomplete="off" className="form-control form-control-sm frmshape" type="text" placeholder="Country" aria-label=".form-control-sm example" /></div>
+                            <div className='col col-md-5 mb-2'><input onChange={(e)=>{this.setState({address : e.target.value})}} value={this.state.address} autocomplete="off" className="form-control form-control-sm frmshape" type="text" placeholder="Address" aria-label=".form-control-sm example" /></div>
+                            <div className='col col-md-5 mb-2'><input onChange={(e)=>{this.setState({delivery : e.target.value})}} value={this.state.delivery} autocomplete="off" className="form-control form-control-sm frmshape" type="text" placeholder="Delivery Address" aria-label=".form-control-sm example" /></div>
+                            <div className='col col-md-5 mb-2'><input onChange={(e)=>{this.setState({phoneNumber : e.target.value})}} value={this.state.phoneNumber} autocomplete="off" className="form-control form-control-sm frmshape" type="text" placeholder="Phone Number" aria-label=".form-control-sm example" /></div>
                            
                           
                            
                             
-                            <div className='col col-md-10 d-flex justify-content-center mt-3 mb-3'><button onClick={(e)=>{this.EditUser(e)}} type="button" class="btn btn-sm btn-outline-info"><AppRegistrationIcon /> Edit Submit</button></div>
+                            <div className='col col-md-10 d-flex justify-content-center mt-3 mb-3'><button onClick={(e)=>{this.EditUser(e)}} type="button" class="btn btn-sm btn-outline-info bdfont"><AppRegistrationIcon /> Edit Submit</button></div>
                             </div>
                     </form>
                 </div>

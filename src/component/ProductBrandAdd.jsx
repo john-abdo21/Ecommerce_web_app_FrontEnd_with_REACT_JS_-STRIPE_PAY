@@ -67,12 +67,12 @@ export class ProductBrandAdd extends Component {
 
     renderMessage=()=>{
         if(this.state.resData != ''){
-            return  <div className='text-center'>
+            return  <div className='text-center headfont'>
                 <p>{this.state.resData}</p>
             </div>
         }else{
-            return <div className='text-center'>
-                <p>Please Enter New Product Brand :</p>
+            return <div className='text-center headfont'>
+                <h4>Please Enter New Product Brand :</h4>
             </div>
         }
     }
@@ -106,9 +106,9 @@ export class ProductBrandAdd extends Component {
             
             
             <div className="card-body bordcardbd d-flex justify-content-center flex-column">
-              <p className="card-title d-flex justify-content-center"><ReportGmailerrorredIcon /> &nbsp;<span className='boldcardtxt'>{perProd.type[0].toUpperCase()+perProd.type.slice(1)}</span></p>
+              <p className="card-title d-flex justify-content-center"><ReportGmailerrorredIcon /> &nbsp;<span className='boldcardtxt headfont'>{perProd.type[0].toUpperCase()+perProd.type.slice(1)}</span></p>
 
-            <Link to="#" onClick={(e)=>{this.delType(e, perProd.slno)}} className="desbtn btn-primary"><DeleteIcon fontSize='small' /> Delete</Link>
+            <Link to="#" onClick={(e)=>{this.delType(e, perProd.slno)}} className="desbtn btn-primary bdfont"><DeleteIcon fontSize='small' /> Delete</Link>
             </div>
             </div>
             </div>
@@ -140,10 +140,10 @@ export class ProductBrandAdd extends Component {
                 </div>
                 <form method="POST">
                     <div className='row row-cols-1 row-cols-md-12 d-flex justify-content-center logintxt regformwidth'>
-                        <div className='col col-md-7 mb-2'><input onChange={(e)=>{this.setState({product : e.target.value})}} className="form-control form-control-sm" type="text" placeholder="Add Product Brand" aria-label=".form-control-sm example" /></div>
-                        <div className='col col-md-7 mb-2'><input onChange={(e)=>{this.setState({image : e.target.files[0]})}} className="form-control form-control-sm" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-custom-class="custom-tooltip" data-bs-title="Insert Product Brand Image in Jpg or Jpeg." id="formFileSm" type="file" /></div>
+                        <div className='col col-md-7 mb-2'><input onChange={(e)=>{this.setState({product : e.target.value})}} className="form-control form-control-sm frmshape" type="text" placeholder="Add Product Brand" aria-label=".form-control-sm example" /></div>
+                        <div className='col col-md-7 mb-2'><input onChange={(e)=>{this.setState({image : e.target.files[0]})}} className="form-control form-control-sm frmshape" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-custom-class="custom-tooltip" data-bs-title="Insert Product Brand Image in Jpg or Jpeg." id="formFileSm" type="file" /></div>
                         
-                        <div className='col col-md-6 d-flex justify-content-center mt-3 mb-3'><button onClick={(e)=>{this.addProductType(e)}} type="button" class="btn btn-sm btn-outline-info"><ProductionQuantityLimitsIcon /> Add Product</button></div>
+                        <div className='col col-md-6 d-flex justify-content-center mt-3 mb-3'><button onClick={(e)=>{this.addProductType(e)}} type="button" class="btn btn-sm btn-outline-info bdfont"><ProductionQuantityLimitsIcon /> Add Product</button></div>
                         
 
                     </div>
@@ -151,7 +151,7 @@ export class ProductBrandAdd extends Component {
             </div>
             <div className='container-fluid editEmp d-flex justify-content-center flex-column topborder p-5'>
                 <div className='row row-cols-1 row-cols-md-12 d-flex justify-content-center logintxt mb-0 p-0 align-items-center'>
-                    <div className='col col-md-12 mb-5 alertshadw d-flex justify-content-center'>All Products Brands :</div>
+                    <div className='col col-md-12 mb-5 alertshadw d-flex justify-content-center headfont'><h4>All Products Brands :</h4></div>
                 </div> 
                 {window.innerWidth>1300 ? <div className='row row-cols-1 row-cols-md-6 mt-5 justify-content-center'>
                 

@@ -24,9 +24,9 @@ export class Footer extends Component {
                 <div className='col'>
                 <div class="card footcarddes">
                 <div class="card-body">
-                  <h5 class="card-title">Contact Us</h5>
+                  <h5 class="card-title headfont">Contact Us</h5>
                 
-                  <p class="card-text cardfootfont">saminyeasararnob@gmail.com<br></br>arnobsamin95@gmail.com<br></br>Phone No. : 01856161055</p>
+                  <p class="card-text cardfootfont bdfontres">saminyeasararnob@gmail.com<br></br>arnobsamin95@gmail.com<br></br>Phone No. : 01856161055</p>
 
                 </div>
                 </div>
@@ -38,9 +38,9 @@ export class Footer extends Component {
                 <div className='col'>
                 <div class="card footcarddes">
                 <div class="card-body">
-                  <h5 class="card-title">About Us</h5>
+                  <h5 class="card-title headfont">About Us</h5>
                   
-                  <p class="card-text cardfootfont">24/7 Hours Active Team Members<br></br>100% Customer Satisfaction<br></br>Authentic Varified Sellers Gaurenteed</p>
+                  <p class="card-text cardfootfont bdfontres">24/7 Hours Active Team Members<br></br>100% Customer Satisfaction<br></br>Authentic Varified Sellers Gaurenteed</p>
               
                 </div>
                 </div>
@@ -52,9 +52,9 @@ export class Footer extends Component {
                 <div className='col'>
                 <div class="card footcarddes">
                 <div class="card-body">
-                  <h5 class="card-title">Terms & Policy</h5>
+                  <h5 class="card-title headfont">Terms & Policy</h5>
                   
-                  <p class="card-text cardfootfont"><Link to='/viewTerms'>Visit Page ...</Link></p>
+                  <p class="card-text cardfootfont bdfontres"><Link to='/viewTerms'>Visit Page ...</Link></p>
           
                 </div>
                 </div>
@@ -68,7 +68,7 @@ export class Footer extends Component {
                 <div className='col'>
                 <div class="card footcarddes">
                 <div class="card-body">
-                  <h5 class="card-title">Payment Methods</h5>
+                  <h5 class="card-title headfont">Payment Methods</h5>
                  <div className='row row-cols-1 row-cols-md-2'>
                     <div className='col'><img src={cashdel} className='cashdel'></img></div>
                     <div className='col'><img src={stripe} className='cashdel'></img></div>

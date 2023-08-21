@@ -68,9 +68,9 @@ export class MainVerfSeller extends Component {
             <img src={perSeller.image} className='card-img-top cardImg'></img>
             
             <div className="card-body">
-            <p className="card-title"><AccountCircleIcon /><span className='boldcardtxt'>{perSeller.name[0].toUpperCase()+perSeller.name.slice(1)}</span></p>
-            <p className="card-text txtsize"><span className='boldcardtxt'>Email :</span> {perSeller.email}<br></br><span className='boldcardtxt'>Date of Birth :</span> {perSeller.date_of_birth.split('T',1)}<br></br><span className='boldcardtxt'>Gender :</span> {perSeller.gender[0].toUpperCase()+perSeller.gender.slice(1)} <br></br><span className='boldcardtxt'>Phone Number :</span> {perSeller.mobile} <br></br><span className='boldcardtxt'>Country :</span> {perSeller.country}<br></br><span className='boldcardtxt'>Address :<br></br></span> {perSeller.address}</p>
-            <Link to={'/verfSeller/'+perSeller.slno} class="desbtn btn-primary"><SettingsIcon fontSize='small' /> Check Seller</Link>
+            <p className="card-title"><AccountCircleIcon /><span className='boldcardtxt headfontres'>{perSeller.name[0].toUpperCase()+perSeller.name.slice(1)}</span></p>
+            <p className="card-text txtsize bdfontres"><span className='boldcardtxt'>Email :</span> {perSeller.email}<br></br><span className='boldcardtxt'>Date of Birth :</span> {perSeller.date_of_birth.split('T',1)}<br></br><span className='boldcardtxt'>Gender :</span> {perSeller.gender[0].toUpperCase()+perSeller.gender.slice(1)} <br></br><span className='boldcardtxt'>Phone Number :</span> {perSeller.mobile} <br></br><span className='boldcardtxt'>Country :</span> {perSeller.country}<br></br><span className='boldcardtxt'>Address :<br></br></span> {perSeller.address}</p>
+            <Link to={'/verfSeller/'+perSeller.slno} class="desbtn btn-primary bdfont"><SettingsIcon fontSize='small' /> Check Seller</Link>
             </div>
             </div>
         </div>
@@ -82,7 +82,7 @@ export class MainVerfSeller extends Component {
         <Fragment>
             <div className='container-fluid editEmp d-flex flex-column p-5'>
                 <div className='row row-cols-1 row-cols-md-12 d-flex justify-content-center logintxt mb-0 p-0 align-items-center'>
-                    <div className='col col-md-12 mb-5 alertshadw d-flex justify-content-center'>All Sellers Who Need Verification :</div>
+                    <div className='col col-md-12 mb-5 alertshadw d-flex justify-content-center headfont'><h4>All Sellers Who Need Verification :</h4></div>
                 </div>
                 {window.innerWidth>1300 ? <div className='row row-cols-1 row-cols-md-6 mt-5 justify-content-center'>
 

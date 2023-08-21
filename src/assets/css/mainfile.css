@@ -1,4 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Oleo+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rancho&display=swap');
 @media (min-width:350px) and (max-width:374px){
+    .textardes{
+        min-width: 88vw;
+        resize: none;
+    }
+    .boxdes3{
+        background-color: #00000059;
+        border-radius: 0.4rem;
+        border: 0.1rem solid cyan;
+        min-width: 94vw !important;
+        max-width: 94vw !important;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        font-size: 0.65rem;
+    }
+    .boxdes2{
+        background-color: #00000059;
+        border-radius: 0.4rem;
+        border: 0.1rem solid cyan;
+        padding-left: 0.8rem;
+        padding-right: 0.8rem;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+        font-size: 0.65rem;
+    }
+    .flxspread{
+        --bs-gutter-x: 1.2rem !important;
+    
+    }
+    
+    .prdimgbox{
+        display: block;
+        width: 10vw;
+        height: 10vw;
+        background-color: red;
+    }
+
     .pwidth{
         padding: 2rem !important;
         border: 0.045rem solid cyan;
@@ -99,6 +137,38 @@
 }
 
 @media (min-width:375px) and (max-width:389px){
+    .textardes{
+        min-width: 88vw;
+        resize: none;
+    }
+    .boxdes3{
+        background-color: #00000059;
+        border-radius: 0.4rem;
+        border: 0.1rem solid cyan;
+        min-width: 94vw !important;
+        max-width: 94vw !important;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        font-size: 0.65rem;
+    }
+    .boxdes2{
+        background-color: #00000059;
+        border-radius: 0.4rem;
+        border: 0.1rem solid cyan;
+        padding-left: 0.8rem;
+        padding-right: 0.8rem;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+        font-size: 0.65rem;
+    }
+    
+.prdimgbox{
+    display: block;
+    width: 10vw;
+    height: 10vw;
+    background-color: red;
+}
+
     .pwidth{
         padding: 2rem !important;
         border: 0.045rem solid cyan;
@@ -196,6 +266,40 @@
 }
 
 @media (min-width:390px) and (max-width:411px){
+    .textardes{
+        min-width: 88vw;
+        resize: none;
+    }
+    
+    .boxdes3{
+        background-color: #00000059;
+        border-radius: 0.4rem;
+        border: 0.1rem solid cyan;
+        min-width: 94vw !important;
+        max-width: 94vw !important;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        font-size: 0.65rem;
+    }
+
+    .boxdes2{
+        background-color: #00000059;
+        border-radius: 0.4rem;
+        border: 0.1rem solid cyan;
+        padding-left: 0.8rem;
+        padding-right: 0.8rem;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+        font-size: 0.65rem;
+    }
+    
+.prdimgbox{
+    display: block;
+    width: 10vw;
+    height: 10vw;
+    background-color: red;
+}
+
     .pwidth{
         padding: 2rem !important;
         border: 0.045rem solid cyan;
@@ -292,6 +396,38 @@
 }
 
 @media (min-width:412px) and (max-width:539px){
+    .textardes{
+        min-width: 84vw;
+        resize: none;
+    }
+    .boxdes3{
+        background-color: #00000059;
+        border-radius: 0.4rem;
+        border: 0.1rem solid cyan;
+        min-width: 90vw !important;
+        max-width: 90vw !important;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        font-size: 0.65rem;
+    }
+    .boxdes2{
+        background-color: #00000059;
+        border-radius: 0.4rem;
+        border: 0.1rem solid cyan;
+        padding-left: 0.8rem;
+        padding-right: 0.8rem;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+        font-size: 0.65rem;
+    }
+    
+.prdimgbox{
+    display: block;
+    width: 10vw;
+    height: 10vw;
+    background-color: red;
+}
+
     .pwidth{
         padding: 2rem !important;
         border: 0.045rem solid cyan;
@@ -386,6 +522,39 @@
 }
 
 @media (min-width:540px) and (max-width:767px){
+    .textardes{
+        min-width: 76vw;
+        resize: none;
+    }
+    .boxdes3{
+        background-color: #00000059;
+        border-radius: 0.4rem;
+        border: 0.1rem solid cyan;
+        min-width: 74vw !important;
+        max-width: 74vw !important;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        font-size: 0.65rem;
+    }
+
+    .boxdes2{
+        background-color: #00000059;
+        border-radius: 0.4rem;
+        border: 0.1rem solid cyan;
+        padding-left: 1.8rem;
+        padding-right: 1.8rem;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+        font-size: 0.65rem;
+    }
+    
+.prdimgbox{
+    display: block;
+    width: 10vw;
+    height: 10vw;
+    background-color: red;
+}
+
     .pwidth{
         padding: 3rem !important;
         border: 0.045rem solid cyan;
@@ -482,6 +651,38 @@
 }
 
 @media (min-width:768px) and (max-width:819px){
+    .textardes{
+        min-width: 52vw;
+        resize: none;
+    }
+    .boxdes3{
+        background-color: #00000059;
+        border-radius: 0.4rem;
+        border: 0.1rem solid cyan;
+        min-width: 52vw !important;
+        max-width: 52vw !important;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        font-size: 0.65rem;
+    }
+    .boxdes2{
+        background-color: #00000059;
+        border-radius: 0.4rem;
+        border: 0.1rem solid cyan;
+        padding-left: 1.8rem;
+        padding-right: 1.8rem;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+        font-size: 0.65rem;
+    }
+    
+.prdimgbox{
+    display: block;
+    width: 10vw;
+    height: 10vw;
+    background-color: red;
+}
+
     .pwidth{
         padding: 3rem !important;
         border: 0.045rem solid cyan;
@@ -581,6 +782,38 @@
 }
 
 @media (min-width:820px) and (max-width:911px){
+    .textardes{
+        min-width: 49vw;
+        resize: none;
+    }
+    .boxdes3{
+        background-color: #00000059;
+        border-radius: 0.4rem;
+        border: 0.1rem solid cyan;
+        min-width: 49vw !important;
+        max-width: 49vw !important;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        font-size: 0.65rem;
+    }
+    .boxdes2{
+        background-color: #00000059;
+        border-radius: 0.4rem;
+        border: 0.1rem solid cyan;
+        padding-left: 1.8rem;
+        padding-right: 1.8rem;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+        font-size: 0.65rem;
+    }
+    
+.prdimgbox{
+    display: block;
+    width: 10vw;
+    height: 10vw;
+    background-color: red;
+}
+
     .pwidth{
         padding: 3rem !important;
         border: 0.045rem solid cyan;
@@ -682,6 +915,38 @@
 }
 
 @media (min-width:912px) and (max-width:1023px){
+    .textardes{
+        min-width: 40vw;
+        resize: none;
+    }
+    .boxdes3{
+        background-color: #00000059;
+        border-radius: 0.4rem;
+        border: 0.1rem solid cyan;
+        min-width: 44vw !important;
+        max-width: 44vw !important;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        font-size: 0.65rem;
+    }
+    .boxdes2{
+        background-color: #00000059;
+        border-radius: 0.4rem;
+        border: 0.1rem solid cyan;
+        padding-left: 1.8rem;
+        padding-right: 1.8rem;
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+        font-size: 0.65rem;
+    }
+    
+.prdimgbox{
+    display: block;
+    width: 10vw;
+    height: 10vw;
+    background-color: red;
+}
+
     .pwidth{
         padding: 3rem !important;
         border: 0.045rem solid cyan;
@@ -781,6 +1046,39 @@
 }
 
 @media (min-width:1024px) and (max-width:1279px){
+    .textardes{
+        min-width: 40vw;
+        resize: none;
+    }
+
+    .boxdes3{
+        background-color: #00000059;
+        border-radius: 0.4rem;
+        border: 0.1rem solid cyan;
+        min-width: 39vw !important;
+        max-width: 39vw !important;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        font-size: 0.65rem;
+    }
+    .boxdes2{
+        background-color: #00000059;
+        border-radius: 0.4rem;
+        border: 0.1rem solid cyan;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+        font-size: 0.65rem;
+    }
+    
+.prdimgbox{
+    display: block;
+    width: 5vw;
+    height: 5vw;
+    background-color: red;
+}
+
     .pwidth{
         padding: 3rem !important;
         border: 0.045rem solid cyan;
@@ -879,6 +1177,39 @@
 }
 
 @media (min-width:1280px) and (max-width:1365px){
+    .textardes{
+        min-width: 33vw;
+        resize: none;
+    }
+
+    .boxdes3{
+        background-color: #00000059;
+        border-radius: 0.4rem;
+        border: 0.1rem solid cyan;
+        min-width: 32vw !important;
+        max-width: 32vw !important;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        font-size: 0.65rem;
+    }
+    .boxdes2{
+        background-color: #00000059;
+        border-radius: 0.4rem;
+        border: 0.1rem solid cyan;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+        font-size: 0.65rem;
+    }
+    
+.prdimgbox{
+    display: block;
+    width: 5vw;
+    height: 5vw;
+    background-color: red;
+}
+
     .pwidth{
         padding: 3rem !important;
         border: 0.045rem solid cyan;
@@ -980,6 +1311,40 @@
 }
 
 @media (min-width:1366px) and (max-width:1919px){
+    .textardes{
+        min-width: 30vw;
+        resize: none;
+    }
+    
+    
+.boxdes3{
+    background-color: #00000059;
+    border-radius: 0.4rem;
+    border: 0.1rem solid cyan;
+    min-width: 30vw !important;
+    max-width: 30vw !important;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    font-size: 0.65rem;
+}
+    .boxdes2{
+        background-color: #00000059;
+        border-radius: 0.4rem;
+        border: 0.1rem solid cyan;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+        font-size: 0.65rem;
+    }
+    
+.prdimgbox{
+    display: block;
+    width: 5vw;
+    height: 5vw;
+    background-color: red;
+}
+
     .pwidth{
         padding: 3rem !important;
         border: 0.045rem solid cyan;
@@ -1077,6 +1442,40 @@
 }
 
 @media (min-width:1920px) and (max-width:2559px){
+    .textardes{
+        min-width: 24vw;
+        resize: none;
+    }
+    
+    
+.boxdes3{
+    background-color: #00000059;
+    border-radius: 0.4rem;
+    border: 0.1rem solid cyan;
+    min-width: 23vw !important;
+    max-width: 23vw !important;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    font-size: 0.65rem;
+}
+    .boxdes2{
+        background-color: #00000059;
+        border-radius: 0.4rem;
+        border: 0.1rem solid cyan;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+        font-size: 0.65rem;
+    }
+    
+.prdimgbox{
+    display: block;
+    width: 5vw;
+    height: 5vw;
+    background-color: red;
+}
+
     .pwidth{
         padding: 3rem !important;
         border: 0.045rem solid cyan;
@@ -1172,6 +1571,39 @@
 }
 
 @media (min-width:3840px) and (max-width:8000px){
+    .textardes{
+        min-width: 24vw;
+        resize: none;
+    }
+    
+    .boxdes3{
+        background-color: #00000059;
+        border-radius: 0.4rem;
+        border: 0.1rem solid cyan;
+        min-width: 12vw !important;
+        max-width: 12vw !important;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        font-size: 0.65rem;
+    }
+    .boxdes2{
+        background-color: #00000059;
+        border-radius: 0.4rem;
+        border: 0.1rem solid cyan;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+        font-size: 0.65rem;
+    }
+    
+.prdimgbox{
+    display: block;
+    width: 5vw;
+    height: 5vw;
+    background-color: red;
+}
+
     .pwidth{
         padding: 3rem !important;
         border: 0.045rem solid cyan;
@@ -1282,8 +1714,13 @@
     padding: var(--bs-offcanvas-padding-y) var(--bs-offcanvas-padding-x);
     overflow-y: auto;
     background-color: #000000;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
     
 }
+.offcanvas-body::-webkit-scrollbar {
+    display: none;
+  }
 
 .offcanvas-header {
     display: flex;
@@ -1464,12 +1901,37 @@
 }
 
 .smaline{
-    font-size: 0.67rem;
+    font-family: 'Rancho', cursive !important;
+    font-size: 0.76rem;
 }
 
 .alertshadw{
     color: cyan;
+    animation: shadonoff 2s linear infinite;
     text-shadow: 0 0 10px #00FFFF, 0 0 20px #00FFFF, 0 0 30px #00FFFF, 0 0 40px #00FFFF, 0 0 40px #00FFFF, 0 0 60px #00FFFF, 0 0 70px #00FFFF;
+}
+@keyframes shadonoff{
+    0%{
+        text-shadow: 0 0 10px #00FFFF;
+    }
+    13%{
+        text-shadow: 0 0 10px #00FFFF, 0 0 20px #00FFFF;
+    }
+    25%{
+        text-shadow: 0 0 10px #00FFFF, 0 0 20px #00FFFF, 0 0 30px #00FFFF;
+    }
+    50%{
+        text-shadow: 0 0 10px #00FFFF, 0 0 20px #00FFFF, 0 0 30px #00FFFF, 0 0 40px #00FFFF, 0 0 50px #00FFFF, 0 0 60px #00FFFF;
+    }
+    75%{
+        text-shadow: 0 0 10px #00FFFF, 0 0 20px #00FFFF, 0 0 30px #00FFFF;
+    }
+    88%{
+        text-shadow: 0 0 10px #00FFFF, 0 0 20px #00FFFF;
+    }
+    100%{
+        text-shadow: 0 0 10px #00FFFF;
+    }
 }
 
 .custom-tooltip {
@@ -1539,7 +2001,7 @@
     overflow-y: auto; /* Use overflow-y: auto instead of overflow: scroll */
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none; /* Firefox */
-    border-top: solid cyan;
+    
 
   }
 
@@ -1552,6 +2014,7 @@
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none; /* Firefox */
    
+   
 
   }
 
@@ -1561,6 +2024,7 @@
   
 
   body{
+    background-color: #1b1b1b;
     overflow: scroll;
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
@@ -1580,7 +2044,7 @@
 
   .cardanim{
     transform: scale(1);
-    transition: all 2s ;
+    transition: all 0.7s linear;
   }
   .cardanim:hover{
     transform: scale(1.13);
@@ -1728,8 +2192,8 @@
 }
 
 .description-container{
-    min-height: 13vh; /* Set the minimum height you want for the description */
-    max-height: 13vh;
+    min-height: 10.5vh; /* Set the minimum height you want for the description */
+    max-height: 10.5vh;
 
     overflow-y: auto; 
 }
@@ -1747,6 +2211,7 @@
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
     text-shadow: 0 0 10px #00FFFF, 0 0 20px #00FFFF, 0 0 30px #00FFFF, 0 0 40px #00FFFF, 0 0 40px #00FFFF, 0 0 60px #00FFFF, 0 0 70px #00FFFF;
+    animation: shadonoff 2s linear infinite;
 }
 
 .changelinkdes{
@@ -1878,7 +2343,7 @@
 
 .cardrev{
     
-    background-color: black;
+    background-color: #00000059;
     color: cyan;
     border: solid cyan;
     text-shadow: 0 0 18px cyan, 0 0 18px cyan, 0 0 18px cyan; 
@@ -1996,11 +2461,246 @@
 }
 
 .ptransfrm{
-    background-color: #000000;
+    background-color: #00000059;
     border-radius: 0.45rem;
     transform: scale(1);
     transition: all 2s;
 }
 .ptransfrm:hover{
     transform : scale(1.1);
+}
+
+.badgerd{
+    border-radius: 50%;
+}
+
+.txtdc{
+    text-decoration: none;
+    color: cyan;
+}
+
+.txtdc:hover{
+    text-decoration: none;
+    color: black;
+}
+
+.cartdes{
+    background-color: #1b1b1b;
+    min-height: 100vh;
+}
+
+.fsz{
+    font-size: 1.5rem;
+}
+.fsz2{
+    font-size: 1rem;
+}
+
+
+.lststl{
+    list-style: none;
+}
+
+.tabledes{
+    color:cyan !important;
+    background-color: transparent !important;
+    
+}
+
+.table{
+    
+        --bs-table-color-type: none !important;
+        --bs-table-bg-type: none !important; 
+        --bs-table-color-state: none !important;
+        --bs-table-bg-state: none !important; 
+        --bs-table-color: none !important; 
+        --bs-table-bg: none !important; 
+        --bs-table-border-color: none !important; 
+        --bs-table-accent-bg: transparent; 
+        /* --bs-table-striped-color: var(--bs-body-color); */
+        /* --bs-table-striped-bg: rgba(0, 0, 0, 0.05); */
+        /* --bs-table-active-color: var(--bs-body-color); */
+        /* --bs-table-active-bg: rgba(0, 0, 0, 0.1); */
+        /* --bs-table-hover-color: var(--bs-body-color); */
+         --bs-table-hover-bg: rgba(0, 0, 0, 0.075); 
+        width: 100%;
+        margin-bottom: 1rem;
+        vertical-align: top;
+        border-color: var(--bs-table-border-color);
+    
+}
+
+.trdes{
+   
+    font-size: 0.7rem;
+}
+
+.ovrflw{
+    overflow-x: scroll;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+
+}
+
+.ovrflw::-webkit-scrollbar {
+  display: none;
+}
+
+
+.fitimg{
+    width: 100%;
+    object-fit: fill;
+    height: 100%;
+    
+}
+
+.gobakhome{
+    background-color: #1b1b1b;
+    min-height: 100vh;
+    overflow: auto;
+}
+
+.bigtc{
+    transform: scale(1);
+    transition: all 0.8s linear;
+}
+
+.bigtc:hover{
+    transform: scale(1.25);
+}
+
+
+.frmshape{
+    transform: scale(1);
+    transition: all 0.7s linear;
+}
+
+.frmshape:hover{
+    transform: scale(1.1);
+}
+
+.confirmedShip{
+    background-color: #1b1b1b;
+    min-height: 100vh;
+    overflow: auto;
+
+}
+
+.specificord{
+    background-color: #1b1b1b;
+    min-height: 100vh;
+    overflow: auto;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+
+}
+
+.specificord::-webkit-scrollbar {
+  display: none;
+}
+
+
+
+
+.bgdk{
+  
+    color: #fff
+}
+
+
+.headings{
+    text-decoration: underline;
+    text-underline-offset: 0.5rem;
+}
+
+.smollsize{
+    font-size: 0.7rem;
+}
+
+.smolfnt2{
+    font-size: 0.95rem;
+}
+
+.headfont{
+    font-family: 'Oleo Script', cursive !important;
+
+}
+
+.headfontres{
+    font-family: 'Oleo Script', cursive !important;
+    font-size: 0.9rem;
+
+}
+
+.bdfont{
+    font-family: 'Rancho', cursive !important;
+    font-size: 1.2rem !important;
+}
+
+
+
+.bdfontres{
+    font-family: 'Rancho', cursive !important;
+    font-size: 1rem !important;
+}
+
+.bdfontrestable{
+    font-family: 'Rancho', cursive !important;
+    font-size: 2rem !important;
+}
+
+
+::placeholder {
+    font-family: 'Rancho', cursive !important;
+  }
+  
+input::placeholder{
+    font-family: 'Rancho', cursive !important;
+}  
+
+input{
+    font-family: 'Rancho', cursive !important;
+}
+
+textarea{
+    font-family: 'Rancho', cursive !important;
+}
+select{
+    font-family: 'Rancho', cursive !important;
+}
+
+input[type=file]::placeholder{
+    font-family: 'Rancho', cursive !important;
+}
+
+.tblz{
+    z-index: 400;
+}
+
+
+#timer{
+    transition: all 0.6s ease-in-out;
+}
+
+#prdtyp{
+    transition: all 0.6s ease-in-out;
+}
+
+#prdbrand{
+    transition: all 0.6s ease-in-out;
+}
+
+
+#prddata{
+    transition: all 0.65s linear;
+}
+
+
+
+#prdrev{
+    transition: all 0.65s linear;
+}
+
+#slide{
+    transition: transform 1s ease-in-out !important;
 }

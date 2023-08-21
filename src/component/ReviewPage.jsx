@@ -9,15 +9,31 @@ export class ReviewPage extends Component {
         this.state = {
             resCondition : '',
             desc : '',
-            rating : 0
+            rating : 0,
+            transform: '-100%',
+            isInitialMount: true
         }
     }
     
     async componentDidMount(){
-        console.log(this.props.role)
+        
         window.$('[data-bs-toggle="tooltip"]').tooltip();
-
+        this.startOpacityChange();
+        
     }
+
+    startOpacityChange() {
+        this.setState({ transform: '-100%', isInitialMount: false });
+
+        const intervalId = setInterval(() => {
+          this.setState((prevState) => ({
+            transform: `${Math.max(-100 + 1, 0)}`,
+          }));
+        }, 100); // Adjust the interval as needed
+      
+        setTimeout(() => clearInterval(intervalId), 1000); // Adjust the duration as needed
+      }
+
 
     changeRating=( newRating, name )=>{
         this.setState({
@@ -33,7 +49,7 @@ export class ReviewPage extends Component {
             </div>
         }else{
             return <div className='text-center'>
-                <p>Please Enter Your Thoughts About Our Service And Regulations .... Your Opinions Means A Lot For Us.</p>
+                <p className='headfont'>Please Enter Your Thoughts About Our Service And Regulations .... Your Opinions Means A Lot For Us.</p>
             </div>
         }
         }
@@ -73,7 +89,20 @@ export class ReviewPage extends Component {
         
     }
 
+    async componentDidUpdate(prevProps){
+
+        if (prevProps.componentId !== this.props.componentId && !this.state.isInitialMount) {
+            this.startOpacityChange();
+          }
+  
+        if (this.state.isInitialMount) {
+              
+              this.setState({ isInitialMount: false });
+            }
+        }
+
     render() {
+        const { transform } = this.state;
         const windowWidth = window.innerWidth;
 
         let starDimension;
@@ -92,7 +121,7 @@ export class ReviewPage extends Component {
 
     return (
         <Fragment>
-            <div className='container-fluid reviewmain d-flex justify-content-center align-items-center flex-column'>
+            <div    id="slide" className='container-fluid reviewmain d-flex justify-content-center align-items-center flex-column' style={{ transform: `translateX(${transform})` }}>
             <div className='row row-cols-1 row-cols-md-12 d-flex justify-content-center logintxt'>
             <div className='col col-md-12 mb-5 alertshadw'>{this.resUserCond()}</div>
         </div>
@@ -100,7 +129,7 @@ export class ReviewPage extends Component {
             <div className='row row-cols-1 row-cols-md-12 d-flex justify-content-center logintxt regformwidth'>
                 
                 
-                <div className='col col-md-10 mb-2'><textarea id='inpfld' onChange={(e)=>{this.setState({desc : e.target.value})}} className="form-control form-control-sm txtboxwidhigh" type="text" placeholder="Insert Review In 600 Characters." data-bs-toggle="tooltip" data-bs-placement="right" data-bs-custom-class="custom-tooltip" data-bs-title="Insert Review ." aria-label=".form-control-sm example"></textarea></div>
+                <div className='col col-md-10 mb-2'><textarea id='inpfld' onChange={(e)=>{this.setState({desc : e.target.value})}} className="form-control form-control-sm txtboxwidhigh frmshape" type="text" placeholder="Insert Review In 600 Characters." data-bs-toggle="tooltip" data-bs-placement="right" data-bs-custom-class="custom-tooltip" data-bs-title="Insert Review ." aria-label=".form-control-sm example"></textarea></div>
                 <div className='col col-md-10 mb-2'><StarRatings
                 rating={this.state.rating}
                 starRatedColor="cyan"
@@ -112,7 +141,7 @@ export class ReviewPage extends Component {
                 /></div>
                 
 
-                <div className='col col-md-10 d-flex justify-content-center mt-3 mb-3'><button onClick={(e)=>{this.sendReview(e)}} type="button" class="btn btn-sm btn-outline-info"><AppRegistrationIcon /> Submit Review</button></div>
+                <div className='col col-md-10 d-flex justify-content-center mt-3 mb-3'><button onClick={(e)=>{this.sendReview(e)}} type="button" class="btn btn-sm btn-outline-info headfont"><AppRegistrationIcon /> Submit Review</button></div>
                 </div>
         </form>
             </div>

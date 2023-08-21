@@ -23,7 +23,9 @@ export class ChangeEventProduct extends Component {
             prdType : '',
             prdBrand : '',
             amountLeft : null,
-            price : null
+            price : null,
+            transform: '-100%',
+            isInitialMount: true
         }
     }
 
@@ -62,7 +64,7 @@ export class ChangeEventProduct extends Component {
                 desc : res3.data.productData[0].description
             })
 
-            
+            this.startOpacityChange();
 
             
 
@@ -70,6 +72,18 @@ export class ChangeEventProduct extends Component {
             console.log(error);
         }
     }
+
+    startOpacityChange() {
+        this.setState({ transform: '-100%', isInitialMount: false });
+
+        const intervalId = setInterval(() => {
+          this.setState((prevState) => ({
+            transform: `${Math.max(-100 + 1, 0)}`,
+          }));
+        }, 100); // Adjust the interval as needed
+      
+        setTimeout(() => clearInterval(intervalId), 1000); // Adjust the duration as needed
+      }
 
       
     addPrdType=()=>{
@@ -86,11 +100,11 @@ export class ChangeEventProduct extends Component {
 
     resUserCond = ()=>{
         if(this.state.resCondition != ''){
-            return <div className='text-center'>
+            return <div className='text-center headfont'>
                 <p>{this.state.resCondition}</p>
             </div>
         }else{
-            return <div className='text-center'>
+            return <div className='text-center headfont'>
                 <p>Please Enter Valid Product Name & Information ...</p>
             </div>
         }
@@ -143,37 +157,51 @@ export class ChangeEventProduct extends Component {
     }
     }
     
+    async componentDidUpdate(prevProps){
+
+        if (prevProps.componentId !== this.props.componentId && !this.state.isInitialMount) {
+            this.startOpacityChange();
+          }
+  
+        if (this.state.isInitialMount) {
+              
+              this.setState({ isInitialMount: false });
+            }
+        }
+
+
     render() {
+        const { transform } = this.state;
         return (
             <Fragment>
-                <div className='container-fluid product d-flex justify-content-center align-items-center flex-column'>
+                <div id="slide" className='container-fluid product d-flex justify-content-center align-items-center flex-column' style={{ transform: `translateX(${transform})` }}>
                 <div className='row row-cols-1 row-cols-md-12 d-flex justify-content-center logintxt'>
                     <div className='col col-md-12 mb-5 alertshadw'>{this.resUserCond()}</div>
                 </div>
                 <form method="POST"  encType='multipart/form-data'>
                     <div className='row row-cols-1 row-cols-md-12 d-flex justify-content-center logintxt regformwidth'>
-                        <div className='col col-md-10 mb-2'><input onChange={(e)=>{this.setState({intro : e.target.value})}} value={this.state.intro} className="form-control form-control-sm" type="text" placeholder="Product Title" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-custom-class="custom-tooltip" data-bs-title="Insert Product Introduction in One Line." aria-label=".form-control-sm example" /></div>
+                        <div className='col col-md-10 mb-2'><input onChange={(e)=>{this.setState({intro : e.target.value})}} value={this.state.intro} className="form-control form-control-sm frmshape" type="text" placeholder="Product Title" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-custom-class="custom-tooltip" data-bs-title="Insert Product Introduction in One Line." aria-label=".form-control-sm example" /></div>
                         
-                        <div className='col col-md-10 mb-2'><textarea onChange={(e)=>{this.setState({desc : e.target.value})}} value={this.state.desc} className="form-control form-control-sm txtboxwidhigh" type="text" placeholder="Product Description" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-custom-class="custom-tooltip" data-bs-title="Insert Product Detailed Description." aria-label=".form-control-sm example"></textarea></div>
+                        <div className='col col-md-10 mb-2'><textarea onChange={(e)=>{this.setState({desc : e.target.value})}} value={this.state.desc} className="form-control form-control-sm txtboxwidhigh frmshape" type="text" placeholder="Product Description" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-custom-class="custom-tooltip" data-bs-title="Insert Product Detailed Description." aria-label=".form-control-sm example"></textarea></div>
                         
-                        <div className='col col-md-5 mb-2'><select onChange={(e)=>{this.setState({prdType : e.target.value})}} value={this.state.prdType} className="form-select" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-custom-class="custom-tooltip" data-bs-title="Insert Product Type." aria-label="Default select example">
+                        <div className='col col-md-5 mb-2'><select onChange={(e)=>{this.setState({prdType : e.target.value})}} value={this.state.prdType} className="form-select frmshape" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-custom-class="custom-tooltip" data-bs-title="Insert Product Type." aria-label="Default select example">
                         <option selected disabled>Product Type</option>
                         {this.addPrdType()}
                         </select></div>
 
 
-                        <div className='col col-md-5 mb-2'><select onChange={(e)=>{this.setState({prdBrand : e.target.value})}} value={this.state.prdBrand} className="form-select" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-custom-class="custom-tooltip" data-bs-title="Insert Product Brand." aria-label="Default select example">
+                        <div className='col col-md-5 mb-2'><select onChange={(e)=>{this.setState({prdBrand : e.target.value})}} value={this.state.prdBrand} className="form-select frmshape" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-custom-class="custom-tooltip" data-bs-title="Insert Product Brand." aria-label="Default select example">
                         <option selected disabled>Product Brand</option>
                         {this.addPrdBrand()}
                         </select></div>
 
-                        <div className='col col-md-5 mb-2'><input onChange={(e)=>{this.setState({amountLeft : e.target.value})}} value={this.state.amountLeft} className="form-control form-control-sm" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-custom-class="custom-tooltip" data-bs-title="Insert Product In Stock." type="number" placeholder="Amount In Stock" aria-label=".form-control-sm example" /></div>
-                        <div className='col col-md-5 mb-2'><input onChange={(e)=>{this.setState({price : e.target.value})}} value={this.state.price} className="form-control form-control-sm" type="number" placeholder="Price $" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-custom-class="custom-tooltip" data-bs-title="Insert Product Price." aria-label=".form-control-sm example" /></div>
+                        <div className='col col-md-5 mb-2'><input onChange={(e)=>{this.setState({amountLeft : e.target.value})}} value={this.state.amountLeft} className="form-control form-control-sm frmshape" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-custom-class="custom-tooltip" data-bs-title="Insert Product In Stock." type="number" placeholder="Amount In Stock" aria-label=".form-control-sm example" /></div>
+                        <div className='col col-md-5 mb-2'><input onChange={(e)=>{this.setState({price : e.target.value})}} value={this.state.price} className="form-control form-control-sm frmshape" type="number" placeholder="Price $" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-custom-class="custom-tooltip" data-bs-title="Insert Product Price." aria-label=".form-control-sm example" /></div>
                         
                         
                         
                         
-                        <div className='col col-md-10 d-flex justify-content-center mt-3 mb-3'><button onClick={(e)=>{this.EditProduct(e)}} type="button" class="btn btn-sm btn-outline-info"><AppRegistrationIcon /> Edit Product</button></div>
+                        <div className='col col-md-10 d-flex justify-content-center mt-3 mb-3'><button onClick={(e)=>{this.EditProduct(e)}} type="button" class="btn btn-sm btn-outline-info bdfont"><AppRegistrationIcon /> Edit Product</button></div>
                         </div>
                 </form>
                 </div>

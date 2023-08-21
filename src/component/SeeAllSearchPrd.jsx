@@ -17,7 +17,7 @@ import {
 
 import axios from 'axios'; 
 
-export class ViewEventProd extends Component {
+export class SeeAllSearchPrd extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -44,7 +44,6 @@ export class ViewEventProd extends Component {
         setTimeout(() => clearInterval(intervalId), 1000); // Adjust the duration as needed
       }
 
-
     
     showProductData = ()=>{
     const windowWidth = window.innerWidth;
@@ -66,8 +65,8 @@ export class ViewEventProd extends Component {
     const indexOfFirstPost = indexOfLastPost - postsPerPage;
     const totalPosts = productData.slice(indexOfFirstPost, indexOfLastPost);
   
-    if(this.state.productData.length>0){
-    return  totalPosts.map((perEmp)=>{
+  
+    if(this.state.productData.length>0){ return totalPosts.map((perEmp)=>{
         return   <div className='col mb-5 mincardbd' key={perEmp.slno}>
         <div className="card cardanim bordandanim">
        
@@ -99,7 +98,7 @@ export class ViewEventProd extends Component {
         
         <div className="card-body">
           <p className="card-title"><CommentIcon /><span className='boldcardtxt fsize headfontres'> {perEmp.name}</span></p>
-          <p className="card-text txtsize bdfontres"><span className='boldcardtxt'>Type :</span> {perEmp.type}<br></br><span className='boldcardtxt'>Brand :</span> {perEmp.brand}<div className="description-container"><span className='boldcardtxt'>Description :<br></br></span> {this.padDescription(perEmp.description)}</div><span className='boldcardtxt'>In Stock :</span> {perEmp.amount_left} <br></br><span className='boldcardtxt'>Price :</span> {perEmp.price}/= <br></br><span className='boldcardtxt'>Seller :</span> {perEmp.seller}<StarRatings
+          <p className="card-text txtsize bdfontres"><span className='boldcardtxt'>Type :</span> {perEmp.type}<br></br><span className='boldcardtxt'>Brand :</span> {perEmp.brand}<div className="description-container"><span className='boldcardtxt'>Description :<br></br></span> {this.padDescription(perEmp.description)}</div><span className='boldcardtxt'>In Stock :</span> {perEmp.amount_left} <br></br><span className='boldcardtxt'>Price :</span> {perEmp.price}/= <br></br><span className='boldcardtxt'>Seller :</span> {perEmp.seller}<br></br><StarRatings
           rating={perEmp.rating}
           starRatedColor="cyan"
           numberOfStars={6}
@@ -107,7 +106,7 @@ export class ViewEventProd extends Component {
           starDimension={starDimension}
           starSpacing={starSpacing}
         /></p>
-          <Link to={'/viewserverEventProduct/'+perEmp.slno} className="desbtn btn-primary"><SettingsIcon fontSize='small' /> View More</Link> 
+          <Link to={'/viewserverProduct/'+perEmp.slno} className="desbtn btn-primary bdfont"><SettingsIcon fontSize='small' /> View More</Link> 
         </div>
         </div>
         </div>
@@ -120,7 +119,7 @@ export class ViewEventProd extends Component {
         const {sln} = this.props.match.params;
         console.log(sln)
         try{
-            const res = await axios.get(`/getEventPrd/${sln}`,{
+            const res = await axios.get(`/getSearchPrd/${sln}`,{
                 headers : {
                   'Content-Type' : 'application/json'
                 }
@@ -141,7 +140,6 @@ export class ViewEventProd extends Component {
     }
 
     async componentDidUpdate(prevProps){
-
         if (prevProps.componentId !== this.props.componentId && !this.state.isInitialMount) {
             this.startOpacityChange();
           }
@@ -151,6 +149,11 @@ export class ViewEventProd extends Component {
               this.setState({ isInitialMount: false });
             }
 
+
+        const {sln} = this.props.match.params;
+        if(prevProps.match.params.sln !== sln){
+            this.componentDidMount();
+        }
     }
   
     padDescription = (description) => {
@@ -175,7 +178,7 @@ export class ViewEventProd extends Component {
         <Fragment>
         <div id="slide" className='container-fluid editEmp2 d-flex flex-column p-5' style={{ transform: `translateX(${transform})` }}>
         <div className='row row-cols-1 row-cols-md-12 d-flex justify-content-center logintxt mb-0 p-0 align-items-center'>
-            <div className='col col-md-12 mb-5 alertshadw d-flex justify-content-center homeptsz text-center headfont'><h4>All Event Products List :</h4></div>
+            <div className='col col-md-12 mb-5 alertshadw d-flex justify-content-center homeptsz text-center headfont'><h4>All Products of This Type :</h4></div>
         </div>
         {window.innerWidth>1300 ? <div className='row row-cols-1 row-cols-md-6 mt-5 justify-content-center'>
 
@@ -209,4 +212,4 @@ export class ViewEventProd extends Component {
     }
 }
 
-export default ViewEventProd
+export default SeeAllSearchPrd

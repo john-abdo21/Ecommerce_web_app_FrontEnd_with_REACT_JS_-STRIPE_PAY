@@ -32,12 +32,12 @@ export class EvenManage extends Component {
 
     resUserCond = ()=>{
         if(this.state.resCondition != ''){
-            return  <div className='text-center'>
+            return  <div className='text-center headfont'>
                 <p>{this.state.resCondition}</p>
             </div>
         }else{
-            return  <div className='text-center'>
-                <p>Make Sure To Add Information Carefully And Don't Leave Any Field Empty ...</p>
+            return  <div className='text-center headfont'>
+                <h4>Make Sure To Add Information Carefully And Don't Leave Any Field Empty ...</h4>
             </div>
         }
     }
@@ -111,9 +111,9 @@ export class EvenManage extends Component {
             <img src={perEvent.event_image} className='card-img-top cardImg'></img>
             
             <div className="card-body">
-              <p className="card-title"><CommentIcon /><span className='boldcardtxt fsize'> {perEvent.event}</span></p>
-              <p className="card-text txtsize"><div className="description-container"><span className='boldcardtxt'>Description :<br></br></span> {this.padDescription(perEvent.event_details)}</div><span className='boldcardtxt'>Time Left :</span> {perEvent.event_end.split("T",1)}</p>
-              <Link to="#" onClick={(e)=>{this.delEvent(e, perEvent.slno)}} className="desbtn btn-primary"><DeleteIcon fontSize='small' /> Delete</Link>
+              <p className="card-title"><CommentIcon /><span className='boldcardtxt fsize headfontres'> {perEvent.event}</span></p>
+              <p className="card-text txtsize bdfontres"><div className="description-container"><span className='boldcardtxt'>Description :<br></br></span> {this.padDescription(perEvent.event_details)}</div><span className='boldcardtxt'>Time Left :</span> {perEvent.event_end.split("T",1)}</p>
+              <Link to="#" onClick={(e)=>{this.delEvent(e, perEvent.slno)}} className="desbtn btn-primary bdfont"><DeleteIcon fontSize='small' /> Delete</Link>
             </div>
             </div>
             </div>
@@ -171,24 +171,24 @@ export class EvenManage extends Component {
         </div>
         <form method="POST"  encType='multipart/form-data'>
             <div className='row row-cols-1 row-cols-md-12 d-flex justify-content-center logintxt regformwidth'>
-                <div className='col col-md-10 mb-2'><input onChange={(e)=>{this.setState({name : e.target.value})}} autocomplete="off" className="form-control form-control-sm" type="text" placeholder="Event Name" aria-label=".form-control-sm example" /></div>
-                <div className='col col-md-10 mb-2'><textarea onChange={(e)=>{this.setState({desc : e.target.value})}} className="form-control form-control-sm txtboxwidhigh" type="text" placeholder="Event Description in short" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-custom-class="custom-tooltip" data-bs-title="Insert Event Detailed Description." aria-label=".form-control-sm example"></textarea></div>
+                <div className='col col-md-10 mb-2'><input onChange={(e)=>{this.setState({name : e.target.value})}} autocomplete="off" className="form-control form-control-sm frmshape" type="text" placeholder="Event Name" aria-label=".form-control-sm example" /></div>
+                <div className='col col-md-10 mb-2'><textarea onChange={(e)=>{this.setState({desc : e.target.value})}} className="form-control form-control-sm txtboxwidhigh frmshape" type="text" placeholder="Event Description in short" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-custom-class="custom-tooltip" data-bs-title="Insert Event Detailed Description." aria-label=".form-control-sm example"></textarea></div>
 
-                <div className='col col-md-5 mb-2'><input onChange={(e)=>{this.setState({image : e.target.files[0]})}} data-bs-toggle="tooltip" data-bs-placement="right" data-bs-custom-class="custom-tooltip" data-bs-title="Insert Event Image In jpg or jpeg Here." className="form-control form-control-sm" id="formFileSm" type="file" /></div>
-                <div className='col col-md-5 mb-2'><input onChange={(e)=>{this.setState({enddate : e.target.value})}} data-bs-toggle="tooltip" data-bs-placement="left" data-bs-custom-class="custom-tooltip" data-bs-title="Insert Event Ending Date." autocomplete="off" className="form-control form-control-sm" type="date" placeholder="Date of Ending" aria-label=".form-control-sm example" /></div>
+                <div className='col col-md-5 mb-2'><input onChange={(e)=>{this.setState({image : e.target.files[0]})}} data-bs-toggle="tooltip" data-bs-placement="right" data-bs-custom-class="custom-tooltip" data-bs-title="Insert Event Image In jpg or jpeg Here." className="form-control form-control-sm frmshape" id="formFileSm" type="file" /></div>
+                <div className='col col-md-5 mb-2'><input onChange={(e)=>{this.setState({enddate : e.target.value})}} data-bs-toggle="tooltip" data-bs-placement="left" data-bs-custom-class="custom-tooltip" data-bs-title="Insert Event Ending Date." autocomplete="off" className="form-control form-control-sm frmshape" type="date" placeholder="Date of Ending" aria-label=".form-control-sm example" /></div>
                 
 
                
                 
                 
-                <div className='col col-md-10 d-flex justify-content-center mt-3 mb-3'><button onClick={(e)=>{this.regEvent(e)}} type="button" class="btn btn-sm btn-outline-info"><AppRegistrationIcon /> Add Event</button></div>
+                <div className='col col-md-10 d-flex justify-content-center mt-3 mb-3'><button onClick={(e)=>{this.regEvent(e)}} type="button" class="btn btn-sm btn-outline-info bdfont"><AppRegistrationIcon /> Add Event</button></div>
             </div>
         </form>
         </div>
 
         <div className='container-fluid editEmp d-flex flex-column p-5'>
         <div className='row row-cols-1 row-cols-md-12 d-flex justify-content-center logintxt mb-0 p-0 align-items-center'>
-            <div className='col col-md-12 mb-5 alertshadw d-flex justify-content-center'>All Events List :</div>
+            <div className='col col-md-12 mb-5 alertshadw d-flex justify-content-center headfont'><h4>All Events List :</h4></div>
         </div>
         {window.innerWidth>1300 ? <div className='row row-cols-1 row-cols-md-6 mt-5 justify-content-center'>
 

@@ -23,11 +23,26 @@ export class ViewBrandProd extends Component {
         this.state = {
             currentPage: 1,
             postsPerPage: 14,
-            productData : []
+            productData : [],
+            transform: '-100%',
+            isInitialMount: true
+            
 
         }
         
     }
+
+    startOpacityChange() {
+        this.setState({ transform: '-100%', isInitialMount: false });
+
+        const intervalId = setInterval(() => {
+          this.setState((prevState) => ({
+            transform: `${Math.max(-100 + 1, 0)}`,
+          }));
+        }, 100); // Adjust the interval as needed
+      
+        setTimeout(() => clearInterval(intervalId), 1000); // Adjust the duration as needed
+      }
     
     
     showProductData = ()=>{
@@ -52,7 +67,7 @@ export class ViewBrandProd extends Component {
   
   
     if(this.state.productData.length>0){ return totalPosts.map((perEmp)=>{
-        return   <div className='col mb-5 mincardbd mx-auto' key={perEmp.slno}>
+        return   <div className='col mb-5 mincardbd' key={perEmp.slno}>
         <div className="card cardanim bordandanim">
        
   
@@ -82,8 +97,8 @@ export class ViewBrandProd extends Component {
   
         
         <div className="card-body">
-          <p className="card-title"><CommentIcon /><span className='boldcardtxt fsize'> {perEmp.name}</span></p>
-          <p className="card-text txtsize"><span className='boldcardtxt'>Type :</span> {perEmp.type}<br></br><span className='boldcardtxt'>Brand :</span> {perEmp.brand}<div className="description-container"><span className='boldcardtxt'>Description :<br></br></span> {this.padDescription(perEmp.description)}</div><span className='boldcardtxt'>In Stock :</span> {perEmp.amount_left} <br></br><span className='boldcardtxt'>Price :</span> {perEmp.price}/= <br></br><span className='boldcardtxt'>Seller :</span> {perEmp.seller}<StarRatings
+          <p className="card-title"><CommentIcon /><span className='boldcardtxt fsize headfontres'> {perEmp.name}</span></p>
+          <p className="card-text txtsize bdfontres"><span className='boldcardtxt'>Type :</span> {perEmp.type}<br></br><span className='boldcardtxt'>Brand :</span> {perEmp.brand}<div className="description-container"><span className='boldcardtxt'>Description :<br></br></span> {this.padDescription(perEmp.description)}</div><span className='boldcardtxt'>In Stock :</span> {perEmp.amount_left} <br></br><span className='boldcardtxt'>Price :</span> {perEmp.price}/= <br></br><span className='boldcardtxt'>Seller :</span> {perEmp.seller}<br></br><StarRatings
           rating={perEmp.rating}
           starRatedColor="cyan"
           numberOfStars={6}
@@ -91,12 +106,12 @@ export class ViewBrandProd extends Component {
           starDimension={starDimension}
           starSpacing={starSpacing}
         /></p>
-          <Link to={'/viewserverProduct/'+perEmp.slno} className="desbtn btn-primary"><SettingsIcon fontSize='small' /> View More</Link> 
+          <Link to={'/viewserverProduct/'+perEmp.slno} className="desbtn btn-primary bdfont"><SettingsIcon fontSize='small' /> View More</Link> 
         </div>
         </div>
         </div>
     })}else{
-        return  <div><p className='alertshadw mb-4'>No Products To Show ...</p></div>
+        return  <div><p className='alertshadw mb-4 text-center headfont'>No Products To Show ...</p></div>
     }
     }
 
@@ -117,12 +132,24 @@ export class ViewBrandProd extends Component {
                   });
               }
 
+              this.startOpacityChange();
+
         }catch(error){
             console.log(error)
         }
+        
     }
 
     async componentDidUpdate(prevProps){
+        if (prevProps.componentId !== this.props.componentId && !this.state.isInitialMount) {
+            this.startOpacityChange();
+          }
+  
+        if (this.state.isInitialMount) {
+              
+              this.setState({ isInitialMount: false });
+            }
+
         const {sln} = this.props.match.params;
         if(prevProps.match.params.sln !== sln){
             this.componentDidMount();
@@ -144,13 +171,14 @@ export class ViewBrandProd extends Component {
       }
 
     render() {
+        const { transform } = this.state;
         const { productData, currentPage, postsPerPage } = this.state;
         const totalPosts = productData.length;
     return (
         <Fragment>
-        <div className='container-fluid editEmp2 d-flex flex-column p-5'>
+        <div id="slide" className='container-fluid editEmp2 d-flex flex-column p-5' style={{ transform: `translateX(${transform})` }}>
         <div className='row row-cols-1 row-cols-md-12 d-flex justify-content-center logintxt mb-0 p-0 align-items-center'>
-            <div className='col col-md-12 mb-5 alertshadw d-flex justify-content-center homeptsz'>All Products of This Brand :</div>
+            <div className='col col-md-12 mb-5 alertshadw d-flex justify-content-center homeptsz text-center headfont'><h4>All Products of This Brand :</h4></div>
         </div>
         {window.innerWidth>1300 ? <div className='row row-cols-1 row-cols-md-6 mt-5 justify-content-center'>
 

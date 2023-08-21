@@ -22,7 +22,9 @@ export class MyProduct extends Component {
         super(props);
         this.state={
             productData : [],
-            delSuc : ''
+            delSuc : '',
+            transform: '-100%',
+            isInitialMount: true
         }
     }
     
@@ -41,12 +43,26 @@ export class MyProduct extends Component {
                 })
             }
 
-            console.log(this.state.productData)
+            this.startOpacityChange();
 
         }catch(error){
             console.log(error)
         }
     }
+
+    startOpacityChange() {
+        this.setState({ transform: '-100%', isInitialMount: false });
+
+        const intervalId = setInterval(() => {
+          this.setState((prevState) => ({
+            transform: `${Math.max(-100 + 1, 0)}`,
+          }));
+        }, 100); // Adjust the interval as needed
+      
+        setTimeout(() => clearInterval(intervalId), 1000); // Adjust the duration as needed
+      }
+
+
     padDescription = (description) => {
         const minLength = 600;
         const currentLength = description.length;
@@ -75,7 +91,7 @@ export class MyProduct extends Component {
         }
         const starSpacing = window.innerWidth > 768 ? '0.12rem' : '0.08rem';
         return  this.state.productData.map((perEmp)=>{
-            return   <div className='col mb-5 mincardbd mx-auto' key={perEmp.slno}>
+            return   <div className='col mb-5 mincardbd' key={perEmp.slno}>
             <div className="card cardanim bordandanim">
            
 
@@ -107,8 +123,8 @@ export class MyProduct extends Component {
     
             
             <div className="card-body">
-              <p className="card-title"><CommentIcon /><span className='boldcardtxt fsize'> {perEmp.name}</span></p>
-              <p className="card-text txtsize"><span className='boldcardtxt'>Type :</span> {perEmp.type}<br></br><span className='boldcardtxt'>Brand :</span> {perEmp.brand}<div className="description-container"><span className='boldcardtxt'>Description :<br></br></span> {this.padDescription(perEmp.description)}</div><span className='boldcardtxt'>In Stock :</span> {perEmp.amount_left} <br></br><span className='boldcardtxt'>Price :</span> {perEmp.price}/= <br></br><StarRatings
+              <p className="card-title"><CommentIcon /><span className='boldcardtxt fsize headfontres'> {perEmp.name}</span></p>
+              <p className="card-text txtsize bdfontres"><span className='boldcardtxt'>Type :</span> {perEmp.type}<br></br><span className='boldcardtxt'>Brand :</span> {perEmp.brand}<div className="description-container"><span className='boldcardtxt'>Description :<br></br></span> {this.padDescription(perEmp.description)}</div><span className='boldcardtxt'>In Stock :</span> {perEmp.amount_left} <br></br><span className='boldcardtxt'>Price :</span> {perEmp.price}/= <br></br><StarRatings
               rating={perEmp.rating}
               starRatedColor="cyan"
               numberOfStars={6}
@@ -116,21 +132,32 @@ export class MyProduct extends Component {
               starDimension={starDimension}
               starSpacing={starSpacing}
             /></p>
-              <Link to={'/changeProduct/'+perEmp.slno} class="desbtn btn-primary"><SettingsIcon fontSize='small' /> Edit</Link> 
+              <Link to={'/changeProduct/'+perEmp.slno} className="desbtn btn-primary bdfont"><SettingsIcon fontSize='small' /> Edit</Link> 
             </div>
             </div>
             </div>
         })
     }
 
-    
+    async componentDidUpdate(prevProps){
+
+        if (prevProps.componentId !== this.props.componentId && !this.state.isInitialMount) {
+            this.startOpacityChange();
+          }
+  
+        if (this.state.isInitialMount) {
+              
+              this.setState({ isInitialMount: false });
+            }
+        }
 
   render() {
+    const { transform } = this.state;
     return (
         <Fragment>
-        <div className='container-fluid editEmp d-flex flex-column p-5'>
+        <div id="slide" className='container-fluid editEmp d-flex flex-column p-5'  style={{ transform: `translateX(${transform})` }}>
         <div className='row row-cols-1 row-cols-md-12 d-flex justify-content-center logintxt mb-0 p-0 align-items-center'>
-            <div className='col col-md-12 mb-5 alertshadw d-flex justify-content-center'>All Products List :</div>
+            <div className='col col-md-12 mb-5 alertshadw d-flex justify-content-center headfont'><h4>All Products List :</h4></div>
         </div>
         {window.innerWidth>1300 ? <div className='row row-cols-1 row-cols-md-6 mt-5 justify-content-center'>
 

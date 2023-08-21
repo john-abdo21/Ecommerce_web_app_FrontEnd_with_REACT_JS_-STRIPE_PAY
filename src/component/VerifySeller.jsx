@@ -47,9 +47,9 @@ export class VerifySeller extends Component {
             <img src={this.state.image} className='card-img-top cardImg'></img>
             
             <div className="card-body">
-            <p className="card-title"><AccountCircleIcon /><span className='boldcardtxt'>{this.state.name}</span></p>
-            <p className="card-text txtsize"><span className='boldcardtxt'>Email :</span> {this.state.email}<br></br><span className='boldcardtxt'>Date of Birth :</span> {this.state.date_of_birth.split('T',1)}<br></br><span className='boldcardtxt'>Age :</span> {this.state.age}<br></br><span className='boldcardtxt'>Gender :</span> {this.state.gender} <br></br><span className='boldcardtxt'>Phone Number :</span> {this.state.phone} <br></br><span className='boldcardtxt'>Country :</span> {this.state.country}<br></br><span className='boldcardtxt'>Address :<br></br></span> {this.state.address}</p>
-            <Link to="#" onClick={(e)=>{this.verfSeller(e, sellerSln)}} class="desbtn btn-primary"><SettingsIcon fontSize='small' />Varify</Link> <Link to="#" onClick={(e)=>{this.rejSeller(e, sellerSln)}} class="desbtn btn-primary"><SettingsIcon fontSize='small' />Reject</Link>
+            <p className="card-title"><AccountCircleIcon /><span className='boldcardtxt headfontres'>{this.state.name}</span></p>
+            <p className="card-text txtsize bdfontres"><span className='boldcardtxt'>Email :</span> {this.state.email}<br></br><span className='boldcardtxt'>Date of Birth :</span> {this.state.date_of_birth.split('T',1)}<br></br><span className='boldcardtxt'>Age :</span> {this.state.age}<br></br><span className='boldcardtxt'>Gender :</span> {this.state.gender} <br></br><span className='boldcardtxt'>Phone Number :</span> {this.state.phone} <br></br><span className='boldcardtxt'>Country :</span> {this.state.country}<br></br><span className='boldcardtxt'>Address :<br></br></span> {this.state.address}</p>
+            <Link to="#" onClick={(e)=>{this.verfSeller(e, sellerSln)}} class="desbtn btn-primary bdfont"><SettingsIcon fontSize='small' />Varify</Link> <Link to="#" onClick={(e)=>{this.rejSeller(e, sellerSln)}} class="desbtn btn-primary bdfont"><SettingsIcon fontSize='small' />Reject</Link>
             </div>
             </div>
             </div>
@@ -88,7 +88,7 @@ export class VerifySeller extends Component {
                     afterStatus : response.data.message
                 })
 
-                setTimeout(()=>{window.location.href= '/verfSellerAll'},1500)
+                setTimeout(()=>{window.location.href= '/verfSellerAll'},1000)
             }
 
         }catch(error){
@@ -97,6 +97,7 @@ export class VerifySeller extends Component {
     }
 
     async componentDidMount(){
+        window.$('[data-bs-toggle="tooltip"]').tooltip();
         const {sellerSln} = this.props.match.params;
         try{
             const response = await axios.get(`/verfSpecificSeller/${localStorage.getItem('slno')}/${sellerSln}`, {
@@ -136,7 +137,7 @@ export class VerifySeller extends Component {
         if(this.state.afterStatus != ''){
             return  <div className='text-center'><p>{this.state.afterStatus}</p></div>
         }else{
-            return  <div className='text-center'><p>All Data Regarding Seller :</p></div>
+            return  <div className='text-center headfont'><h4>All Data Regarding Seller :</h4></div>
         }
     }
   render() {
@@ -147,14 +148,14 @@ export class VerifySeller extends Component {
                 <div className='col col-md-12 mb-5 alertshadw d-flex justify-content-center'>{this.showAfter()}</div>
             </div>
             {window.innerWidth>1300 ? <div className='row row-cols-1 row-cols-md-6 mt-5 justify-content-center'>
-            <div className='col mb-5 mincardbd'><div className="card cardanim"><img src={this.state.nid_image} className='card-img-top cardImg'></img></div></div>
+            <div className='col mb-5 mincardbd'><div className="card cardanim"><img src={this.state.nid_image} className='card-img-top cardImg' data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-title="Seller NID Image ... Make Sure To Check Address And NID Number From It."></img></div></div>
         {this.showSellerData()}
         
         
             </div> : 
             <div className='row row-cols-1 row-cols-md-4 mt-5 justify-content-center'>
 
-                <div className='col mb-5 mincardbd'><div className="card cardanim"><img src={this.state.nid_image} className='card-img-top cardImg'></img></div></div>
+                <div className='col mb-5 mincardbd'><div className="card cardanim"><img src={this.state.nid_image} className='card-img-top cardImg' data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-title="Seller NID Image ... Make Sure To Check Address And NID Number From It."></img></div></div>
                 {this.showSellerData()}
 
             

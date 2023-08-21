@@ -39,6 +39,123 @@ export class Home extends Component {
     };
 
   async componentDidMount(){
+    window.addEventListener('scroll',()=>{
+      try{
+        var topTimer = document.getElementById('timer').getBoundingClientRect().top;
+        var bottomTimer = document.getElementById('timer').getBoundingClientRect().bottom;
+        var topTimer2 = document.getElementById('prdtyp').getBoundingClientRect().top;
+        var bottomTimer2 = document.getElementById('prdtyp').getBoundingClientRect().bottom;
+        var topTimer3 = document.getElementById('prdbrand').getBoundingClientRect().top;
+        var bottomTimer3 = document.getElementById('prdbrand').getBoundingClientRect().bottom;
+        var topTimer4 = document.getElementById('prddata').getBoundingClientRect().top;
+        var bottomTimer4 = document.getElementById('prddata').getBoundingClientRect().bottom;
+        var topTimer5 = document.getElementById('prdrev').getBoundingClientRect().top;
+        var bottomTimer5 = document.getElementById('prdrev').getBoundingClientRect().bottom;
+
+
+      }catch(err){
+        
+      }
+      
+      
+      if(topTimer<=window.innerHeight/2 && bottomTimer>=window.innerHeight/2){
+        try{
+          document.getElementById('timer').style.transform = 'translateX(0%)';
+        }catch(err){
+          
+        }
+        
+      }else{
+        try{
+          document.getElementById('timer').style.transform = 'translateX(-100%)';
+        }catch(err){
+          
+        }
+        
+      }
+
+
+      
+      
+      if(topTimer2<=window.innerHeight/2 && bottomTimer2>=window.innerHeight/2){
+        try{
+          document.getElementById('prdtyp').style.transform = 'translateX(0%)';
+        }catch(err){
+          
+        }
+        
+      }else{
+        try{
+          document.getElementById('prdtyp').style.transform = 'translateX(100%)';
+        }catch(err){
+          
+        }
+        
+      }
+
+
+      
+      
+      if(topTimer3<=window.innerHeight/2 && bottomTimer3>=window.innerHeight/2){
+        try{
+          document.getElementById('prdbrand').style.transform = 'translateX(0%)';
+        }catch(err){
+          
+        }
+        
+      }else{
+        try{
+          document.getElementById('prdbrand').style.transform = 'translateX(-100%)';
+        }catch(err){
+         
+        }
+        
+      }
+
+
+
+
+      
+      
+      if(topTimer4<=window.innerHeight/2 && bottomTimer4>=window.innerHeight/2){
+        try{
+          document.getElementById('prddata').style.opacity = '1';
+        }catch(err){
+      
+        }
+        
+      }else{
+        try{
+          document.getElementById('prddata').style.opacity = '0';
+        }catch(err){
+         
+        }
+        
+      }
+
+
+
+      
+      
+      if(topTimer5<=window.innerHeight/2 && bottomTimer5>=window.innerHeight/2){
+        try{
+          document.getElementById('prdrev').style.opacity = '1';
+        }catch(err){
+        
+        }
+        
+      }else{
+        try{
+          document.getElementById('prdrev').style.opacity = '0';
+        }catch(err){
+        
+        }
+        
+      }
+
+    });
+    
+
     try{
       const res1 = await axios.get(`/eventDats`,{
         headers : {
@@ -114,18 +231,18 @@ export class Home extends Component {
         return    <div className="carousel-item active" data-bs-interval="4000">
       <img src={eachev.event_image} className="d-block w-100 objft" alt="..." />
       <div className="carousel-caption d-block d-md-block">
-        <h5 className='carshead carseltext'>{eachev.event}</h5>
-        <p className="carseltext">{eachev.event_details} ...Till {eachev.event_end.split('T',1)}</p>
-        <button type="button" className="btn btn-sm btn-info"><Link to={'/viewserverProductEvents/'+eachev.slno} className="btn-primary evbtn">Shop Now</Link></button>
+        <h5 className='carshead carseltext headfont'>{eachev.event}</h5>
+        <p className="carseltext bdfont">{eachev.event_details} ...Till {eachev.event_end.split('T',1)}</p>
+        <button type="button" className="btn btn-sm btn-info bdfont"><Link to={'/viewserverProductEvents/'+eachev.slno} className="btn-primary evbtn">Shop Now</Link></button>
       </div>
     </div>
       }else{
         return    <div className="carousel-item" data-bs-interval="3000">
       <img src={eachev.event_image} className="d-block w-100 objft" alt="..." />
       <div className="carousel-caption d-block d-md-block">
-        <h5 className='carshead carseltext'>{eachev.event}</h5>
-        <p className='carseltext'>{eachev.event_details} ...Till {eachev.event_end.split('T',1)}</p>
-        <button type="button" className="btn btn-sm btn-info"><Link to={'/viewserverProductEvents/'+eachev.slno} className="btn-primary evbtn">Shop Now</Link></button>
+        <h5 className='carshead carseltext headfont'>{eachev.event}</h5>
+        <p className='carseltext bdfont'>{eachev.event_details} ...Till {eachev.event_end.split('T',1)}</p>
+        <button type="button" className="btn btn-sm btn-info bdfont"><Link to={'/viewserverProductEvents/'+eachev.slno} className="btn-primary evbtn">Shop Now</Link></button>
       </div>
     </div>
       }
@@ -142,8 +259,8 @@ export class Home extends Component {
         
         
         <div className="card-body bordcardbd2 d-flex justify-content-center flex-column">
-          <p className="card-title d-flex justify-content-center flex-column"><span className='boldcardtxt text-center'>{perProd.event}</span></p>
-          <p className="card-title d-flex justify-content-center flex-column"><span className='boldcardtxt text-center'><Countdown date={perProd.event_end} /></span></p>
+          <p className="card-title d-flex justify-content-center flex-column"><span className='boldcardtxt text-center headfont'>{perProd.event}</span></p>
+          <p className="card-title d-flex justify-content-center flex-column"><span className='boldcardtxt text-center bdfont'><Countdown date={perProd.event_end} /></span></p>
         
         </div>
         </div>
@@ -159,7 +276,7 @@ showPrdTypeData = ()=>{
     <img src={perProd.image} class="card-img cardImg2" alt="..."></img>
     
     <div className="card-img-overlay bordcardbd3 d-flex justify-content-center flex-column">
-    <Link to={'/viewserverProductType/'+perProd.slno} className="btn-primary"><p className="card-title d-flex justify-content-center flex-column txtshad2"><span className='boldcardtxt text-center'>{perProd.type}</span></p></Link>
+    <Link to={'/viewserverProductType/'+perProd.slno} className="btn-primary"><p className="card-title d-flex justify-content-center flex-column txtshad2"><span className='boldcardtxt text-center bdfont'>{perProd.type}</span></p></Link>
 
     
     </div>
@@ -176,7 +293,7 @@ showPrdBrandData = ()=>{
     <img src={perProd.image} class="card-img cardImg2" alt="..."></img>
     
     <div className="card-img-overlay bordcardbd3 d-flex justify-content-center flex-column">
-    <Link to={'/viewserverProductBrand/'+perProd.slno} className="btn-primary"><p className="card-title d-flex justify-content-center flex-column txtshad2"><span className='boldcardtxt text-center'>{perProd.type}</span></p></Link>
+    <Link to={'/viewserverProductBrand/'+perProd.slno} className="btn-primary"><p className="card-title d-flex justify-content-center flex-column txtshad2"><span className='boldcardtxt text-center bdfont'>{perProd.type}</span></p></Link>
 
     
     </div>
@@ -209,8 +326,8 @@ showReviewData = ()=>{
         </div>
         <div className="col col-md-11">
           <div className="card-body">
-            <h5 className="card-title">{perEvent.usermail}</h5>
-            <p className="card-text fntsizerev homerevbox">{perEvent.comment}</p>
+            <h5 className="card-title headfont">{perEvent.usermail}</h5>
+            <p className="card-text fntsizerev homerevbox bdfont">{perEvent.comment}</p>
             <p className="card-text"><StarRatings
         rating={perEvent.rating}
         starRatedColor="cyan"
@@ -280,8 +397,8 @@ showProductData = ()=>{
 
       
       <div className="card-body">
-        <p className="card-title"><CommentIcon /><span className='boldcardtxt fsize'> {perEmp.name}</span></p>
-        <p className="card-text txtsize"><span className='boldcardtxt'>Type :</span> {perEmp.type}<br></br><span className='boldcardtxt'>Brand :</span> {perEmp.brand}<div className="description-container"><span className='boldcardtxt'>Description :<br></br></span> {this.padDescription(perEmp.description)}</div><span className='boldcardtxt'>In Stock :</span> {perEmp.amount_left} <br></br><span className='boldcardtxt'>Price :</span> {perEmp.price}/= <br></br><span className='boldcardtxt'>Seller :</span> {perEmp.seller}<StarRatings
+        <p className="card-title"><CommentIcon /><span className='boldcardtxt fsize headfontres'> {perEmp.name}</span></p>
+        <p className="card-text txtsize bdfontres"><span className='boldcardtxt'>Type :</span> {perEmp.type}<br></br><span className='boldcardtxt'>Brand :</span> {perEmp.brand}<div className="description-container"><span className='boldcardtxt'>Description :<br></br></span> {this.padDescription(perEmp.description)}</div><span className='boldcardtxt'>In Stock :</span> {perEmp.amount_left} <br></br><span className='boldcardtxt'>Price :</span> {perEmp.price}/= <br></br><span className='boldcardtxt'>Seller :</span> {perEmp.seller}<br></br><StarRatings
         rating={perEmp.rating}
         starRatedColor="cyan"
         numberOfStars={6}
@@ -289,7 +406,7 @@ showProductData = ()=>{
         starDimension={starDimension}
         starSpacing={starSpacing}
       /></p>
-        <Link to={'/viewserverProduct/'+perEmp.slno} className="desbtn btn-primary"><SettingsIcon fontSize='small' /> View More</Link> 
+        <Link to={'/viewserverProduct/'+perEmp.slno} className="desbtn btn-primary bdfontres"><SettingsIcon fontSize='small' /> View More</Link> 
       </div>
       </div>
       </div>
@@ -350,7 +467,7 @@ padDescription = (description) => {
 
 
             
-            <div className='container-fluid timerhight d-flex justify-content-center flex-column topborder p-5'>
+            <div id='timer' className='container-fluid timerhight d-flex justify-content-center flex-column topborder p-5'>
             {window.innerWidth>1300 ? <div className='row row-cols-1 row-cols-md-6 mt-5 justify-content-center'>
 
             {this.showTimerData()}
@@ -370,9 +487,9 @@ padDescription = (description) => {
 
 
 
-            <div className='container-fluid prdtypebox d-flex justify-content-center flex-column pt-5'>
+            <div id='prdtyp' className='container-fluid prdtypebox d-flex justify-content-center flex-column pt-5'>
               <div className='row row-cols-1 row-cols-md-12 d-flex justify-content-center logintxt mt-3 mb-0 p-0 align-items-center'>
-                <div className='col col-md-12 mb-5 alertshadw d-flex justify-content-center align-items-center homeptsz'>All Products Type :</div>
+                <div className='col col-md-12 mb-5 alertshadw d-flex justify-content-center align-items-center homeptsz headfont'>All Products Type :</div>
               </div>
 
               <div className='container-fluid prdtyphight pt-3 d-flex flex-column'>
@@ -399,9 +516,9 @@ padDescription = (description) => {
 
 
 
-            <div className='container-fluid prdtypebox d-flex justify-content-center flex-column  pt-5'>
+            <div id='prdbrand' className='container-fluid prdtypebox d-flex justify-content-center flex-column  pt-5'>
               <div className='row row-cols-1 row-cols-md-12 d-flex justify-content-center logintxt mt-3 mb-0 p-0 align-items-center'>
-                <div className='col col-md-12 mb-5 alertshadw d-flex justify-content-center align-items-center homeptsz'>All Products Brand :</div>
+                <div className='col col-md-12 mb-5 alertshadw d-flex justify-content-center align-items-center homeptsz headfont'>All Products Brand :</div>
               </div>
 
               <div className='container-fluid prdtyphight pt-3 d-flex flex-column'>
@@ -427,9 +544,9 @@ padDescription = (description) => {
 
 
            
-        <div className='container-fluid editEmp2 d-flex flex-column p-5'>
+        <div id='prddata' className='container-fluid editEmp2 d-flex flex-column p-5'>
         <div className='row row-cols-1 row-cols-md-12 d-flex justify-content-center logintxt mb-0 p-0 align-items-center'>
-            <div className='col col-md-12 mb-5 alertshadw d-flex justify-content-center homeptsz'>All Products List :</div>
+            <div className='col col-md-12 mb-5 alertshadw d-flex justify-content-center homeptsz headfont'>All Products List :</div>
         </div>
         {window.innerWidth>1300 ? <div className='row row-cols-1 row-cols-md-6 mt-5 justify-content-center'>
 
@@ -461,9 +578,9 @@ padDescription = (description) => {
 
 
 
-        <div className='container-fluid editEmp2 d-flex flex-column p-5'>
+        <div id='prdrev' className='container-fluid editEmp2 d-flex flex-column p-5'>
         <div className='row row-cols-1 row-cols-md-12 d-flex justify-content-center logintxt mb-0 p-0 align-items-center'>
-            <div className='col col-md-12 mb-5 alertshadw d-flex justify-content-center homeptsz'>Latest Reviews :</div>
+            <div className='col col-md-12 mb-5 alertshadw d-flex justify-content-center homeptsz headfont'>Latest Reviews :</div>
         </div>
         {window.innerWidth>1300 ? <div className='row row-cols-1 row-cols-md-2 mt-5 justify-content-center'>
 

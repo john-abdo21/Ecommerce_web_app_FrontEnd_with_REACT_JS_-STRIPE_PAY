@@ -9,6 +9,17 @@ import Pagination from 'react-js-pagination';
 import SettingsIcon from '@mui/icons-material/Settings';
 import CommentIcon from '@mui/icons-material/Comment';
 
+
+import BadgeIcon from '@mui/icons-material/Badge';
+import StorefrontIcon from '@mui/icons-material/Storefront';
+import DescriptionIcon from '@mui/icons-material/Description';
+import FormatListBulletedIcon from '@mui/icons-material/FormatListBulleted';
+import VerifiedUserIcon from '@mui/icons-material/VerifiedUser';
+import Inventory2Icon from '@mui/icons-material/Inventory2';
+import PriceChangeIcon from '@mui/icons-material/PriceChange';
+
+
+
 import {
     BrowserRouter as Router,
     Switch,
@@ -159,6 +170,27 @@ export class EventProductAdd extends Component {
         }
     }
 
+    addToCart=async (e,prdsl)=>{
+        e.preventDefault();
+        try{
+
+            const response = await axios.get(`/addeventCart/${localStorage.getItem('slno')}/${prdsl}`,{
+                headers : {
+                    'Content-Type' : 'application/json'
+                }
+            });
+            if(response.data.message == 'Success'){
+                window.location.reload();
+            }
+            if(response.data.message == 'Nothing Left.'){
+                window.location.reload();
+            }
+
+        }catch(error){
+            console.log(error)
+        }
+        
+    }
 
     showReviewData = ()=>{
         
@@ -173,8 +205,8 @@ export class EventProductAdd extends Component {
               </div>
               <div className="col col-md-11">
                 <div className="card-body">
-                  <h5 className="card-title">{perEvent.email}</h5>
-                  <p className="card-text fntsizerev homerevbox">{perEvent.comment}</p>
+                  <h5 className="card-title headfont">{perEvent.email}</h5>
+                  <p className="card-text fntsizerev homerevbox bdfont">{perEvent.comment}</p>
                   
                 </div>
               </div>
@@ -182,7 +214,7 @@ export class EventProductAdd extends Component {
           </div>
         })
         }else{
-            return  <div><p className='alertshadw text-center'>No Product Review For This Product Yet.</p></div>
+            return  <div><p className='alertshadw text-center bdfont'>No Product Review For This Product Yet.</p></div>
         }
       }
       
@@ -239,8 +271,8 @@ export class EventProductAdd extends Component {
       
             
             <div className="card-body">
-              <p className="card-title"><CommentIcon /><span className='boldcardtxt fsize'> {perEmp.name}</span></p>
-              <p className="card-text txtsize"><span className='boldcardtxt'>Type :</span> {perEmp.type}<br></br><span className='boldcardtxt'>Brand :</span> {perEmp.brand}<div className="description-container"><span className='boldcardtxt'>Description :<br></br></span> {this.padDescription(perEmp.description)}</div><span className='boldcardtxt'>In Stock :</span> {perEmp.amount_left} <br></br><span className='boldcardtxt'>Price :</span> {perEmp.price}/= <br></br><span className='boldcardtxt'>Seller :</span> {perEmp.seller}<StarRatings
+              <p className="card-title"><CommentIcon /><span className='boldcardtxt fsize headfontres'> {perEmp.name}</span></p>
+              <p className="card-text txtsize bdfontres"><span className='boldcardtxt'>Type :</span> {perEmp.type}<br></br><span className='boldcardtxt'>Brand :</span> {perEmp.brand}<div className="description-container"><span className='boldcardtxt'>Description :<br></br></span> {this.padDescription(perEmp.description)}</div><span className='boldcardtxt'>In Stock :</span> {perEmp.amount_left} <br></br><span className='boldcardtxt'>Price :</span> {perEmp.price}/= <br></br><span className='boldcardtxt'>Seller :</span> {perEmp.seller}<br></br><StarRatings
               rating={perEmp.rating}
               starRatedColor="cyan"
               numberOfStars={6}
@@ -248,12 +280,12 @@ export class EventProductAdd extends Component {
               starDimension={starDimension}
               starSpacing={starSpacing}
             /></p>
-              <Link to={'/viewserverProduct/'+perEmp.slno} className="desbtn btn-primary"><SettingsIcon fontSize='small' /> View More</Link> 
+              <Link to={'/viewserverProduct/'+perEmp.slno} className="desbtn btn-primary bdfont"><SettingsIcon fontSize='small' /> View More</Link> 
             </div>
             </div>
             </div>
         })}else{
-            return  <div><p className='alertshadw mb-4 text-center'>No Products To Show ...</p></div>
+            return  <div><p className='alertshadw mb-4 text-center bdfont'>No Products To Show ...</p></div>
         }
         }
 
@@ -316,7 +348,7 @@ export class EventProductAdd extends Component {
                             </div>
                         </div>
                         <div className='col col-md-12 mt-5 mb-3'>
-                            <p className='cartaddfont glowef p-1 pwidth ptransfrm'><b>Product Name :</b> &nbsp;{this.state.product.name}<br></br><b>Seller :</b> &nbsp;{this.state.product.sellerName}<br></br><br></br><b>Product Description :</b> &nbsp;{this.state.product.description}<br></br><br></br><b>Type :</b> &nbsp;{this.state.product.type}<br></br><b>Brand :</b> &nbsp;{this.state.product.brand}<br></br><b>In Stock :</b> &nbsp;{this.state.product.amount_left}<br></br><b>Price :</b> &nbsp;{this.state.product.price}/=<br></br><br></br><VisibilityIcon /> <b>Total Views :</b> &nbsp;{this.state.product.total_view}<br></br><ThumbUpIcon /> <b>Liked :</b> &nbsp;{this.state.product.like_amount}<br></br><ThumbDownAltIcon /> <b>Disliked :</b> &nbsp;{this.state.product.dislike_amount}<br></br><br></br><b>Rating : </b> &nbsp;<StarRatings
+                            <p className='cartaddfont glowef p-1 pwidth ptransfrm bdfont'><BadgeIcon /> &nbsp;<b>Product Name :</b> &nbsp;<span className='smolfnt2'>{this.state.product.name}</span><br></br><StorefrontIcon /> &nbsp;<b>Seller :</b> &nbsp;<span className='smolfnt2'>{this.state.product.sellerName}</span><br></br><br></br><DescriptionIcon /> &nbsp;<b>Product Description :</b> &nbsp;<span className='smolfnt2'>{this.state.product.description}</span><br></br><br></br><FormatListBulletedIcon /> &nbsp;<b>Type :</b> &nbsp;<span className='smolfnt2'>{this.state.product.type}</span><br></br><VerifiedUserIcon /> &nbsp;<b>Brand :</b> &nbsp;<span className='smolfnt2'>{this.state.product.brand}</span><br></br><Inventory2Icon /> &nbsp;<b>In Stock :</b> &nbsp;<span className='smolfnt2'>{this.state.product.amount_left}</span><br></br><PriceChangeIcon /> &nbsp;<b>Price :</b> &nbsp;<span className='smolfnt2'>{this.state.product.price}/=</span><br></br><br></br><VisibilityIcon /> <b>Total Views :</b> &nbsp;<span className='smolfnt2'>{this.state.product.total_view}</span><br></br><ThumbUpIcon /> <b>Liked :</b> &nbsp;<span className='smolfnt2'>{this.state.product.like_amount}</span><br></br><ThumbDownAltIcon /> <b>Disliked :</b> &nbsp;<span className='smolfnt2'>{this.state.product.dislike_amount}</span><br></br><br></br><b>Rating : </b> &nbsp;<StarRatings
                                 rating={this.state.product.rating}
                                 starRatedColor="cyan"
                                 numberOfStars={6}
@@ -327,8 +359,8 @@ export class EventProductAdd extends Component {
                             
                         </div>
 
-                        <div className='col col-md-12 mt-1 d-flex justify-content-center mb-5'>
-                            {this.state.role == ''? <button type="button" className="btn btn-sm btn-outline-info disabled"><AddShoppingCartIcon /> Log In To Buy</button> : this.state.role == 'Seller' ? <button type="button" className="btn btn-sm btn-outline-info disabled"><AddShoppingCartIcon /> Only Buyers Can Buy</button> : this.state.role == 'Employee' ? <button type="button" className="btn btn-sm btn-outline-info disabled"><AddShoppingCartIcon /> Only Buyers Can Buy</button> : this.state.role == 'User' && this.state.product.amount_left>0 ? <button type="button" className="btn btn-sm btn-outline-info"><AddShoppingCartIcon /> Add To Cart</button> : null}
+                        <div className='col col-md-12 mt-1 d-flex justify-content-center mb-5 bdfont'>
+                            {this.state.role == ''? <button type="button" className="btn btn-sm btn-outline-info disabled"><AddShoppingCartIcon /> Log In To Buy</button> : this.state.role == 'Seller' ? <button type="button" className="btn btn-sm btn-outline-info disabled"><AddShoppingCartIcon /> Only Buyers Can Buy</button> : this.state.role == 'Employee' ? <button type="button" className="btn btn-sm btn-outline-info disabled"><AddShoppingCartIcon /> Only Buyers Can Buy</button> : this.state.role == 'User' && this.state.product.amount_left>0 ? <button type="button" onClick={(e)=>{this.addToCart(e,this.state.product.slno)}} className="btn btn-sm btn-outline-info"><AddShoppingCartIcon /> Add To Cart</button> : null}
                         </div>
                     </div>
 
@@ -340,7 +372,7 @@ export class EventProductAdd extends Component {
 
                 <div className='container-fluid editEmp2 d-flex flex-column p-5'>
         <div className='row row-cols-1 row-cols-md-12 d-flex justify-content-center logintxt mb-0 p-0 align-items-center'>
-            <div className='col col-md-12 mb-5 alertshadw d-flex justify-content-center homeptsz text-center'>Reviews From Users Who Bought It :</div>
+            <div className='col col-md-12 mb-5 alertshadw d-flex justify-content-center homeptsz text-center headfont'>Reviews From Users Who Bought It :</div>
         </div>
         {window.innerWidth>1300 ? <div className='row row-cols-1 row-cols-md-2 mt-5 justify-content-center'>
 
@@ -363,7 +395,7 @@ export class EventProductAdd extends Component {
 
                 <div className='container-fluid editEmp2 d-flex flex-column p-5'>
         <div className='row row-cols-1 row-cols-md-12 d-flex justify-content-center logintxt mb-0 p-0 align-items-center'>
-            <div className='col col-md-12 mb-5 alertshadw d-flex justify-content-center homeptsz'>Products You May Like :</div>
+            <div className='col col-md-12 mb-5 alertshadw d-flex justify-content-center homeptsz headfont'>Products You May Like :</div>
         </div>
         {window.innerWidth>1300 ? <div className='row row-cols-1 row-cols-md-6 mt-5 justify-content-center'>
 
