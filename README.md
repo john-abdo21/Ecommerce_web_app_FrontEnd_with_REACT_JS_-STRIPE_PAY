@@ -77,6 +77,10 @@ The main concern of our project is to creat full responsive, reactive, authentic
 
 ![EShopBD com and 3 more pages - Personal - Microsoft​ Edge 8_21_2023 5_58_13 PM](https://github.com/SaminKirigaya/Ecommerce_web_app_FrontEnd_with_REACT_JS/assets/104618775/d3b5a8d0-70d7-4bae-86ec-a7fc3b89c137)
 
+![EShopBD com and 3 more pages - Personal - Microsoft​ Edge 8_21_2023 5_59_40 PM](https://github.com/SaminKirigaya/Ecommerce_web_app_FrontEnd_with_REACT_JS/assets/104618775/89e2c48f-aaa7-4996-a6cf-b9e9a8e284bd)
+
+
+
 ![EShopBD com and 3 more pages - Personal - Microsoft​ Edge 8_21_2023 5_58_19 PM](https://github.com/SaminKirigaya/Ecommerce_web_app_FrontEnd_with_REACT_JS/assets/104618775/169b569d-2e2f-48f6-8166-74fadda475ef)
 
 ![EShopBD com and 3 more pages - Personal - Microsoft​ Edge 8_21_2023 5_58_24 PM](https://github.com/SaminKirigaya/Ecommerce_web_app_FrontEnd_with_REACT_JS/assets/104618775/739d8b63-3038-4fcd-9dcc-2610e7e0a2e7)
