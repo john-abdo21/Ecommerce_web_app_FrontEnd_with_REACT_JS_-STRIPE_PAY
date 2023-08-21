@@ -10,6 +10,13 @@ The main concern of our project is to creat full responsive, reactive, authentic
 - Authentication & Authorization
 - Fullscreen mode
 - Class and Object based state and hook system
+- State and Hook based system
+- Stripe payment sandbox api and same time cash on delivery system added
+- Image are processed before saving with Jimp in backend
+- Tokenized system with Hashing of user password
+- User or Seller account creation are controlled with otp and verifying
+- Verification with mail
+  
   
 
 ## Design And Demo 
