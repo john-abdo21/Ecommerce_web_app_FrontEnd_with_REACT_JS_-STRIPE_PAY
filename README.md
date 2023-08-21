@@ -16,6 +16,18 @@ The main concern of our project is to creat full responsive, reactive, authentic
 - Tokenized system with Hashing of user password
 - User or Seller account creation are controlled with otp and verifying
 - Verification with mail
+
+
+## Lessons Learned
+-  React Js
+-  State Handle
+-  Hook System
+-  React Star Rating Module
+-  React Countdown Timer
+-  React Js Pagination Module
+-  React Router Dom
+-  Axios
+-  Props Handling
   
   
 
