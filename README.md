@@ -1,7 +1,7 @@
 
 # Ecommerce Web FrontEnd With React Js.
 
-The main concern of our project is to creat full responsive and reactive Ecommerce web service with React js latest version.
+The main concern of our project is to creat full responsive, reactive, authentication, authorization based Ecommerce web service with React js latest version.
 
 
 ## Features
