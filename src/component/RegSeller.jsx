@@ -65,9 +65,25 @@ export class RegSeller extends Component {
 
 resUserCond = ()=>{
   if(this.state.resCondition != ''){
+    if(this.state.resCondition == '"phoneNumber" with value "+8801856161055" fails to match the required pattern: /^([0-9 ]+)$/'){
       return <div className='text-center headfont'>
-          <p>{this.state.resCondition}</p>
+      <p>Phone Number must be a valid number and you dont need to add +country code.</p>
       </div>
+  }else if(this.state.resCondition == '"image" is not allowed'){
+      return <div className='text-center headfont'>
+      <p>Image must be a jpg image within 500kb.</p>
+      </div>
+  }else if(this.state.resCondition=='"nidImage" is not allowed'){
+
+    return <div className='text-center headfont'>
+      <p>Nid Image / Profile Image Should Be Provided in Jpg / Jpeg Format, They Must Never Be Empty.</p>
+      </div>
+  }
+  else{
+      return <div className='text-center headfont'>
+      <p>{this.state.resCondition}</p>
+      </div>
+  }
   }else{
       return <div className='text-center headfont'>
           <h5>Please Enter Valid Email and Information ...<br/>Image Can only Be Jpg or Jpeg Formated.<br></br>Your Image & Mail Is Not Changeable in Future ... So, Be Careful.</h5>
