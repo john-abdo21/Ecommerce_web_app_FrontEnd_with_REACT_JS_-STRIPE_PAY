@@ -29,7 +29,13 @@ The main concern of our project is to creat full responsive, reactive, authentic
 -  Axios
 -  Props Handling
   
-  
+## Important Note 
+  The Project has three segment of login (User, Seller, Employee). If a seller does registration before login as the seller make sure to verify it using employee user id ....
+  Employee can log in at Employee page.
+  Employee admin id :
+  email : gokus@gmail.com
+  pass : iamgoku
+
 
 ## Design And Demo 
 
@@ -101,6 +107,8 @@ Inside Index.js there are two setting I did for Rest Api handling ...
 - axios.defaults.headers.common['Authorization'] = 'Bearer '+localStorage.getItem('token');
 
 Here, i ran it in my localhost and my backed rest api was in this url. So, i used this base url so change it when you host it.
+
+
 ## Run Locally
 
 Clone the project
